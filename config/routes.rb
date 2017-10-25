@@ -1,10 +1,45 @@
 Rails.application.routes.draw do
-  get '/index', to: 'app/front#index', as: :app_index
+   get '/cssslider', to: 'app/front#cssslider', as: :app_cssslider
+   get '/atencion', to: 'app/front#atencion', as: :app_atencion
+   get '/colocacioninstrumentos', to: 'app/front#colocacioninstrumentos', as: :app_colocacioninstrumentos
+   get '/index', to: 'app/front#index', as: :app_index
+   get '/estructuracion', to: 'app/front#estructuracion', as: :app_estructuracion
+   get '/quienessomos', to: 'app/front#quienessomos', as: :app_quienessomos
+   get '/juridica', to: 'app/front#juridica', as: :app_juridica
+   get '/emisor', to: 'app/front#emisor', as: :app_emisor
+   get '/ventajas', to: 'app/front#ventajas', as: :app_ventajas
+   get '/contacto', to: 'app/front#contacto', as: :app_contacto
+   get '/colocacion', to: 'app/front#colocacion', as: :app_colocacion
+   get '/tarifas', to: 'app/front#tarifas', as: :app_tarifas
+   get '/persona', to: 'app/front#persona', as: :app_persona
+   get '/marcolegal', to: 'app/front#marcolegal', as: :app_marcolegal
+   get '/mercadosecundario', to: 'app/front#mercadosecundario', as: :app_mercadosecundario
+   get '/custodia', to: 'app/front#custodia', as: :app_custodia
   root to: 'app/front#index'
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
 
   namespace :admin do
+    resources :banners do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+      get '/clone', action: 'clone'
+      delete(
+        action: :destroy_multiple,
+        on: :collection,
+        as: :destroy_multiple
+      )
+    end
+
+    resources :indicators do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+      get '/clone', action: 'clone'
+      delete(
+        action: :destroy_multiple,
+        on: :collection,
+        as: :destroy_multiple
+      )
+    end
+
     resources :customizes do
       get '(page/:page)', action: :index, on: :collection, as: ''
       get '/clone', action: 'clone'

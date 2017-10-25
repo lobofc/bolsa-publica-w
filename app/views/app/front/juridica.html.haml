@@ -1,0 +1,505 @@
+!!!
+%html
+  %head
+    = render 'app/layouts/head'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bolsa Pública
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/estilos.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+  %body
+    .col.l12
+      .cintillo
+        %img{:src => "assets/img/cintillo.jpg"}/
+    .navbar-fixed
+      %nav
+        .nav-wrapper.white
+          %a.brand-logo{:href => "/index"}
+            %img{:src => "assets/img/Logo_encabezado.png"}/
+          %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+            %i.material-icons menu
+          %ul.right.hide-on-med-and-down
+            %li
+              %a.grey-text.text-darken-4{:href => "/index"} Inicio
+            %li
+              %a.grey-text.text-darken-4{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
+            %li
+              %a.grey-text.text-darken-4{:href => "/estadisticas"} Estadísticas
+            %li
+              %a.grey-text.text-darken-4{:href => "/contacto"} Contácto
+          %ul#mobile-demo.side-nav
+            %li
+              %a{:href => "/index"} Inicio
+            %li
+              %a{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a{:href => "/tarifas"} Tarifas
+            %li
+              %a{:href => "/contacto"} Contácto
+            %li
+              %a{:href => "/estadisticas"} Estadísticas
+    .container.anidada
+      .row
+        .col.s12
+          %h4 Requisitos para Persona Jurídica
+        .col.s12
+          .card
+            .card-tabs
+              %ul.tabs.tabs-fixed-width
+                %li.tab
+                  %a.active{:href => "#test4"} Persona Jurídica
+                %li.tab
+                  %a{:href => "#test5"} Cajas de ahorro / Fondos de ahorro, jubilaciones y pensionados
+                %li.tab
+                  %a{:href => "#test6"} Instituciones Bancarias
+            .card-content
+              #test4
+                .row.col.s12
+                  %a.btn.button-collapse.red.darken-4.white-text{"data-activates" => "slide-out", :href => "#"}
+                    %i.material-icons.left> archive
+                    Descargar Formatos
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Ficha de Identificación del Inversor (Persona Jurídica)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Llene la Ficha de Identificación del Inversor para Personal Jurídica, ubicada en la página web de la institución www.bpvb.gob.ve.
+                      %li
+                        %h6 Complete todos los campos, en los que no posee información, colocar N/A como señal “NO APLICA”.
+                      %li
+                        %h6 La Ficha de Identificación del Inversor no debe llevar tachaduras ni enmiendas.
+                      %li
+                        %h6 Puede ser llenada a bolígrafo (tinta negra) o computador.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Copia del Documento Constitutivo Estatutario
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe consignar todos los Documentos Constitutivos Estatuarios de la empresa, con sus últimas modificaciones.
+                      %li
+                        %h6 Deben estar debidamente registradas.
+                      %li
+                        %h6 En caso de empresas Extranjeras no domiciliadas en la República, debe consignar copia del Documento Constitutivo traducido al idioma Castellano y debidamente legalizado por el Consulado de la República Bolivariana de Venezuela en el País de Origen.
+                      %li
+                        %h6 En caso que una Persona Jurídica sea accionista del futuro inversor, debe consignar Documento Constitutivo Estatutario y RIF.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Copia de Poder debidamente Notariado
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Solo en caso que lo amerite.
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 Los datos del R.I.F., deben coincidir con los datos a incluir en la Ficha de Identificación del Inversor para Persona Jurídica.
+                .row
+                  .col.s12.yellow.darken-2.border4
+                    %h5.white-text.center-align.requisito Últimas tres (03) Declaraciones de Impuesto Sobre La Renta
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe consignar Certificado de Declaración Electrónico.
+                      %li
+                        %h6 Debe consignar la Planilla de Declaración.
+                      %li
+                        %h6 En caso que la empresa esté constituida en un tiempo menor a tres años, consignar las declaradas a la fecha.
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Estados de Cuenta
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Últimos tres meses de los estados de cuentas correspondientes a las cuentas inscritas en la Ficha de Identificación para Persona Jurídica.
+                      %li
+                        %h6 Últimos tres meses de los estados de cuentas correspondientes a las cuentas inscritas en la Ficha de Identificación para Persona Jurídica.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Certificación Bancaria
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Certificación Bancaria en Bolívares, donde se se refleje los 20 dígitos de la cuenta bancaria sellada y firmada por la Entidad Bancaria.
+                      %li
+                        %h6 Certificación Bancaria de apertura de la Cuenta Convenio N°20 emitida por la Entidad Bancaria emisora.
+                      %li
+                        %h6 Certificación Bancaria de otras cuentas en el exterior que usted desee incorporar.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Balance General de la Empresa y Estado de Ganancias y Pérdidas
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe corresponder a la fecha de cierre según los estatutos.
+                      %li
+                        %h6 Debe corresponder a los tres (03) últimos cierres económicos.
+                      %li
+                        %h6 Si la empresa tiene menos de ese tiempo operando, deberá presentar ESTADO FINANCIERO de los ejercicios que posea.
+                      %li
+                        %h6 Los Estados Financieros no podrán ser elaborados ni firmados por el comisario de la empresa (en caso de poseerlo), deben estar avalados por un Contador Público debidamente colegiado y certificado.
+                .row
+                  .col.s12.borderList
+                    %ul.margenList
+                      %li.cambio
+                        %h6
+                          %b Los miembros de la Junta Directiva de la Empresa, debidamente identificados en el Documento Constitutivo Estatutario deben consignar los siguientes documentos
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito.cambio Copia de la Cédula de Identidad de todos los integrantes de la Junta Directiva
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 La copia de la Cédula de Identidad debe ser legible. (Evidencie foto, datos y firma).
+                      %li
+                        %h6 No se requiere un tamaño especial.
+                      %li
+                        %h6 Debe estar vigente.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Copia del Pasaporte
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Sólo para extranjeros residentes en el territorio de la República Bolivariana de Venezuela.
+                      %li
+                        %h6 La copia del pasaporte debe ser legible. (Evidencie foto, datos y firma).
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 En caso de tener visa de trabajo, debe incluirla.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Copia del Registro de Información Fiscal (R.I.F.)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe estar vigente.
+                .col.s12
+                  %ul
+                    %li.cambio
+                      %h6
+                        %b En caso de ser una empresa Extranjera, consignar lo siguiente:
+                .row
+                  .col.s12.yellow.darken-2.border4
+                    %h5.white-text.center-align.requisito Certificado de Inversionista Extrangero
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 En caso de ser extranjero, consignar autorización emanada por la Superintendencia Nacional de Valores.
+              #test5
+                .row.col.s12
+                  %a.btn.button-collapse.red.darken-4.white-text{"data-activates" => "slide-out2", :href => "#"}
+                    %i.material-icons.left> archive
+                    Descargar Formatos
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Ficha de Identificación del Inversor (Persona Jurídica)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Llene la Ficha de Identificación del Inversor para Persona Jurídica, ubicada en la página web de la institución www.bpvb.gob.ve.
+                      %li
+                        %h6 Complete todos los campos, en los que no posee información, colocar N/A como señal “NO APLICA”.
+                      %li
+                        %h6 La Ficha de Identificación del Inversor no debe llevar tachaduras ni enmiendas.
+                      %li
+                        %h6 Puede ser llenada a bolígrafo (tinta negra) o computador.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Solicitud de los Estados de Cuenta
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Solicitud de los estados de cuenta de los n° de cuenta registrados (3 meses anteriores).
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Certificación Bancaria
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Certificación de cuentas registradas en Bolívares, donde se refleje los 20 dígitos de la cuenta bancaria.
+                      %li
+                        %h6 Certificación Bancaria de apertura de la Cuenta Convenio N°20 y/o otras cuentas en el exterior que posea el inversor.
+                .row
+                  .col.s12.yellow.darken-2.border4
+                    %h5.white-text.center-align.requisito Copia del Documento Constitutivo Estatutario
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe consignar todos los Documentos Constitutivos Estatuario, con sus últimas modificaciones.
+                      %li
+                        %h6 Deben estar debidamente registradas.
+                      %li
+                        %h6 Debe contener dentro de sus estatutos la facultad para invertir el títulos valores. De no estar facultado, se recomienda realizar una Asamblea de Asociados donde se le otorgue dicha facultad.
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Copia del Registro de Información Fiscal (R.I.F.)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 Los datos del R.I.F., deben coincidir con los datos a incluir en la Ficha de Identificación del Inversor para Cajas de Ahorro, Fondos de Ahorro o Fondo de Jubliaciones y Pensionados.
+                .row
+                  .col.s12.borderList
+                    %ul.margenList
+                      %li.cambio
+                        %h6
+                          %b Los miembros del Consejo de Administración, debidamente identificados en el Documento Constitutivo Estatutario deben consignar los siguientes documentos:
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Copia de la Cédula de Identidad de todos los integrantes del Consejo de Administración. (Presidente, Tesorero y Secretario)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 La copia de la Cédula de Identidad debe ser legible. (Evidencie foto, datos y firma).
+                      %li
+                        %h6 No se requiere un tamaño especial.
+                      %li
+                        %h6 Debe estar vigente.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Copia del Pasaporte
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Sólo para extranjeros residentes en el territorio de la República Bolivariana de Venezuela.
+                      %li
+                        %h6 La copia del pasaporte debe ser legible. (Evidencie foto, datos y firma).
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 En caso de tener visa de trabajo, debe incluirla.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Copia del Pasaporte. Copia del Registro de Información Fiscal (R.I.F.)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 Especificar que persona juridica, fondo, caja de ahorro.
+                .row
+                  .col.s12.yellow.darken-2.border4
+                    %h5.white-text.center-align.requisito Copia de Poder Notariado
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 En el caso que lo amerite.
+              #test6
+                .row.col.s12
+                  %a.btn.button-collapse.red.darken-4.white-text{"data-activates" => "slide-out3", :href => "#"}
+                    %i.material-icons.left> archive
+                    Descargar Formatos
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Ficha de Identificación del Inversor (Entidades Bancarias / Seguros / OVA)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Llene la Ficha de Identificación del Inversor, ubicada en la página web de la institución www.bpvb.gob.ve.
+                      %li
+                        %h6 Complete todos los campos, en los que no posee información, colocar N/A como señal “NO APLICA”.
+                      %li
+                        %h6 La Ficha de Identificación del Inversor no debe llevar tachaduras ni enmiendas.
+                      %li
+                        %h6 Puede ser llenada a bolígrafo (tinta negra) o computador.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Copia del Documento Constitutivo Estatutario
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe consignar el Documento Constitutivo Estatutario en el cual indique los miembros de la Junta Directiva vigentes.
+                      %li
+                        %h6 Deben estar debidamente registradas.
+                      %li
+                        %h6 En caso de empresas Extranjeras no domiciliadas en la República, debe consignar copia del Documento Constitutivo traducido al idioma Castellano y debidamente legalizado por el Consulado de la República Bolivariana de Venezuela en el País de Origen.
+                      %li
+                        %h6 En caso que una Persona Jurídica sea accionista del futuro inversor, debe consignar Documento Constitutivo Estatutario y RIF de la misma.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Copia del Registro de Información Fiscal (R.I.F.) de la Empresa
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 Los datos del R.I.F., deben coincidir con los datos a incluir en la Ficha de Identificación del Inversor para Persona Jurídica.
+                .row
+                  .col.s12.yellow.darken-2.border4
+                    %h5.white-text.center-align.requisito Copia de Poder debidamente Notariado
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Sólo para aquellos que no actúen por cuenta propia.
+                      %li
+                        %h6 Consignarlo en caso que una de las firmas autorizadas sea un apoderado.
+                      %li
+                        %h6 El Poder debe hacer mención a Compra/Venta de Títulos Valores, Intermediación y Custodia.
+                      %li
+                        %h6
+                          De ser el apoderado una firma autorizada, deberá consignar copia de la cédula de identidad legible y
+                          Registro de Información Fiscal (R.I.F.).
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Estados de Cuenta. (Sólo Seguros y OVA)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Últimos tres meses de los estados de cuentas correspondientes a las cuentas inscritas en la Ficha de Identificación para Persona Jurídica.
+                      %li
+                        %h6 Deben venir sellados y firmados por la Entidad Bancaria emisora.
+                .row
+                  .col.s12.borderList
+                    %ul.margenList
+                      %li.cambio
+                        %h6
+                          %b Los miembros de la Junta Directiva de la Empresa, debidamente identificados en el Documento Constitutivo Estatutario deben consignar los siguientes documentos:
+                .row
+                  .col.s12.red.darken-1.border
+                    %h5.white-text.center-align.requisito Copia de la Cédula de Identidad de todos los integrantes de la Junta Directiva
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 La copia de la Cédula de Identidad debe ser legible (Evidencie foto, datos y firma).
+                      %li
+                        %h6 No se requiere un tamaño especial.
+                      %li
+                        %h6 Debe estar vigente.
+                .row
+                  .col.s12.grey.darken-2.border2
+                    %h5.white-text.center-align.requisito Copia del Pasaporte
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Sólo para extranjeros residentes en el territorio de la República Bolivariana de Venezuela.
+                      %li
+                        %h6 La copia del pasaporte debe ser legible. (Evidencie foto, datos y firma).
+                      %li
+                        %h6 Debe estar vigente.
+                      %li
+                        %h6 En caso de tener visa de trabajo, debe incluirla.
+                .row
+                  .col.s12.blue.darken-3.border3
+                    %h5.white-text.center-align.requisito Copia del Registro de Información Fiscal (R.I.F.)
+                  .col.s12.borderList
+                    %ol.margenList.cambio
+                      %li
+                        %h6 Debe estar vigente.
+        %ul#slide-out.side-nav
+          %li
+            .user-view
+              .background
+                %img{:src => "assets/img/"}/
+              %a{:href => "#!user"}
+                %img.circle{:src => "assets/img/logo.png"}/
+              %a{:href => "#!name"}
+                %span.black-text.name
+                  %b Persona Jurídica
+          %li
+            .divider
+          %li
+            %a{:href => "paso a paso persona jurídica.pdf", :target => "blank"} Instructivo paso a paso
+          %li
+            %a{:href => "Lista de recaudos para PJ.pdf", :target => "blank"} Lista de recaudos
+          %li
+            %a{:href => "Ficha de Identificacion del Inversor PJ.docx"} Ficha de identificación del inversor
+          %li
+            %a{:href => "Separadores Inversor Persona Jurídica.pdf", :target => "blank"} Modelo de Carpeta
+          %li
+            %a{:href => "Declaracion jurada PJ.docx"} Declaración jurada
+        %ul#slide-out2.side-nav
+          %li
+            .user-view
+              .background
+                %img{:src => "assets/img/"}/
+              %a{:href => "#!user"}
+                %img.circle{:src => "assets/img/logo.png"}/
+              %a{:href => "#!name"}
+                %span.black-text.name
+                  %b Cajas de Ahorro
+          %li
+            .divider
+          %li
+            %a{:href => "paso a paso cajas de ahorro.pdf", :target => "blank"} Instructivo paso a paso
+          %li
+            %a{:href => "Lista de recaudos para CA.pdf", :target => "blank"} Lista de recaudos
+          %li
+            %a{:href => "Ficha de Inversor CA.docx"} Ficha de identificación del inversor
+          %li
+            %a{:href => "Separadores Inversor Cajas de ahorro.pdf", :target => "blank"} Modelo de Carpeta
+          %li
+            %a{:href => "Declaracion jurada PJ.docx"} Declaración jurada
+        %ul#slide-out3.side-nav
+          %li
+            .user-view
+              .background
+                %img{:src => "assets/img/"}/
+              %a{:href => "#!user"}
+                %img.circle{:src => "assets/img/logo.png"}/
+              %a{:href => "#!name"}
+                %span.black-text.name
+                  %b Instituciones Bancarias
+          %li
+            .divider
+          %li
+            %a{:href => "paso a paso entidades bancarias.pdf", :target => "blank"} Instructivo paso a paso
+          %li
+            %a{:href => "Lista de recaudos EB.pdf", :target => "blank"} Lista de recaudos
+          %li
+            %a{:href => "Ficha de Inversor entidades bancarias.docx"} Ficha de identificación del inversor
+          %li
+            %a{:href => "Separadores Entidades Bancarias.pdf", :target => "blank"} Modelo de Carpeta
+          %li
+            %a{:href => "Declaracion jurada PJ.docx"} Declaración jurada
+    %footer.page-footer
+      .container
+        .row
+          .col.l6.s12
+            %h5.white-text Bolsa Pública de Valores Bicentenaria
+            %p.grey-text.text-lighten-4
+              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N, Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
+              %br/
+              %b Horario de atención al público:
+              De 8:00 a.m. a 4:30 p.m.
+              %br/
+              %b Teléfono:
+              0212-9558800.
+          .col.l4.offset-l2.s12
+            %h5.white-text Links
+            %ul
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Prevención
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Atención al Ciudadano
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Marco Legal
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Glosario de términos
+      .footer-copyright
+        .container
+          © 2017 Copyright Bolsa Pública de Valores Bicentenaria / RIF: G-20009677-2
+          %a.grey-text.text-lighten-4.right{:href => "#!"} More Links
+    %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
+    %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
+    :javascript
+      $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+      })
+
+      $(document).ready(function(){
+          $('.slider').slider();
+        });
+
+      $(".button-collapse").sideNav();
+
+      // Hide sideNav
+      $('.button-collapse').sideNav('hide');
+      // Destroy sideNav
+      $('.button-collapse').sideNav('destroy');

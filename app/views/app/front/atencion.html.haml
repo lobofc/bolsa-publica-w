@@ -1,0 +1,90 @@
+!!!
+%html
+  %head
+    = render 'app/layouts/head'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bolsa Pública
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/estilos.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+  %body
+    .col.l12
+      .cintillo
+        %img{:src => "assets/img/cintillo.jpg"}/
+    .navbar-fixed
+      %nav
+        .nav-wrapper.white
+          %a.brand-logo{:href => "/index"}
+            %img{:src => "assets/img/Logo_encabezado.png"}/
+          %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+            %i.material-icons menu
+          %ul.right.hide-on-med-and-down
+            %li
+              %a.grey-text.text-darken-4{:href => "/index"} Inicio
+            %li
+              %a.grey-text.text-darken-4{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
+            %li
+              %a.grey-text.text-darken-4{:href => "/estadisticas"} Estadísticas
+            %li
+              %a.grey-text.text-darken-4{:href => "/contacto"} Contácto
+          %ul#mobile-demo.side-nav
+            %li
+              %a{:href => "/index"} Inicio
+            %li
+              %a{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a{:href => "/tarifas"} Tarifas
+            %li
+              %a{:href => "/contacto"} Contácto
+            %li
+              %a{:href => "/estadisticas"} Estadísticas
+    .container.anidada
+      .row
+        .z-depth-5.shadow.col.s10.offset-s1
+          .col.s10.offset-s1.cambio.justificar
+            %p La Oficina de Atención Ciudadana es una dependencia, adscrita a la Presidencia de la BPVB, donde las servidoras, servidores públicos, ciudadanas, ciudadanos y comunidades organizadas pueden recibir orientación e información directa, oportuna, flexible y veraz, sobre la administración de los recursos que integran el patrimonio público de la institución, así como, atender sus quejas, reclamos, denuncias, sugerencias, peticiones y solicitudes coherentes con la naturaleza de la BPVB, promoviendo, de esta manera la participación ciudadana y el ejercicio de Contralaría Social de acuerdo a lo establecido en la Constitución de la República Bolivariana de Venezuela y demás leyes y reglamentos que tipifican la actuación de las OAC.
+        .col.s12
+          %h5.tablaMargen.center-align ¿Cómo puede presentar su denuncia, queja, reclamo, solicitud o sugerencia ante la Oficina de Atención al Ciudadano?
+        .image.tablaMargen.col.s12
+          %img{:src => "assets/img/atencion.png"}/
+    %footer.page-footer
+      .container
+        .row
+          .col.l6.s12
+            %h5.white-text Bolsa Pública de Valores Bicentenaria
+            %p.grey-text.text-lighten-4
+              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N, Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
+              %br/
+              %b Horario de atención al público:
+              De 8:00 a.m. a 4:30 p.m.
+              %br/
+              %b Teléfono:
+              0212-9558800.
+          .col.l4.offset-l2.s12
+            %h5.white-text Links
+            %ul
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Prevención y control
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Atención al Ciudadano
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Marco Legal
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Glosario de términos
+      .footer-copyright
+        .container
+          © 2017 Copyright Bolsa Pública de Valores Bicentenaria / RIF: G-20009677-2
+          %a.grey-text.text-lighten-4.right{:href => "#!"} More Links
+    %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
+    %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
+    :javascript
+      $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+      })
+
+      $(document).ready(function(){
+        $('.slider').slider();
+      });

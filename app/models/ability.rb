@@ -7,6 +7,12 @@ class Ability
 
     if user.has_role? :admin
 
+      # - Banner authorize -
+      can :manage, Banner
+
+      # - Indicator authorize -
+      can :manage, Indicator
+
       # - Customize authorize -
       can [:delete, :update,
            :new, :create, :install_default,

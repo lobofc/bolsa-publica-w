@@ -1,0 +1,153 @@
+!!!
+%html
+  %head
+    = render 'app/layouts/head'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bolsa Pública
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/estilos.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+  %body
+    .col.l12
+      .cintillo
+        %img{:src => "assets/img/cintillo.jpg"}/
+    .navbar-fixed
+      %nav
+        .nav-wrapper.white
+          %a.brand-logo{:href => "/index"}
+            %img{:src => "assets/img/Logo_encabezado.png"}/
+          %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+            %i.material-icons menu
+          %ul.right.hide-on-med-and-down
+            %li
+              %a.grey-text.text-darken-4{:href => "/index"} Inicio
+            %li
+              %a.grey-text.text-darken-4{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
+            %li
+              %a.grey-text.text-darken-4{:href => "/estadisticas"} Estadísticas
+            %li
+              %a.grey-text.text-darken-4{:href => "/contacto"} Contácto
+          %ul#mobile-demo.side-nav
+            %li
+              %a{:href => "/index"} Inicio
+            %li
+              %a{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a{:href => "/tarifas"} Tarifas
+            %li
+              %a{:href => "/contacto"} Contácto
+            %li
+              %a{:href => "/estadisticas"} Estadísticas
+    .container.anidada
+      .row
+        .col.s12.cambio.justificar
+          %h5 Tarifas de inscripción y colocación de títulos valores
+          %p.flow-text La Bolsa Pública de Valores Bicentenaria (BPVB), informa las nuevas tarifas de inscripción y colocación de Títulos Valores, prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
+        .col.s12
+          %table.striped.responsive-table.tablaMargen
+            %thead
+              %tr.red.darken-4
+                %th.white-text Descripción de la Comisión
+                %th.white-text Detalles
+                %th.white-text Tarifa
+            %tbody
+              %tr.izquierda
+                %td Inscripción de Títulos Valores
+                %td
+                  Las tarifas se aplican sobre el monto de la emisión aprobada por la
+                  %br/
+                  Superintendencia Nacional de Valores (SNV)
+                %td 0,05%
+              %tr.izquierda
+                %td Colocación de Títulos Valores
+                %td Las tarifas se aplican sobre los títulos valores totalmente colocados
+                %td 1,00%
+          .col.s12.cambio.justificar
+            %h5 Tarifas por servicio de mantenimiento de custodia
+            %p.flow-text
+              %b La Bolsa Pública de Valores Bicentenaria (BPVB)
+              informa las nuevas tarifas a partir del 01 de Junio de 2017  por el
+              = succeed "," do
+                %b Servicio de Custodia de Títulos Valores
+            %p.flow-text
+              %b Beneficios
+          %ol.cambio.checkLista
+            %li
+              %p Seguridad y protección de sus Títulos Valores.
+            %li
+              %p Ofrece a los inversores mantener sus inversiones en estricta confidencialidad.
+            %li
+              %p Agilidad en las transacciones de intermediación.
+            %li
+              %p Abono directo en su cuenta (inscritas en la BPVB),  por cobro de intereses, dividendos o vencimiento de capital.
+            %li
+              %p Emisión de certificado de custodia si lo requiere.
+          %p
+            %b Requisito
+          %ol.cambio.checkLista
+            %li
+              %p Estar inscrito en la BPVB.
+          %p
+            %b Pagos
+          %ol.cambio.checkLista
+            %li
+              %p Solo se aceptan  transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
+    %footer.page-footer
+      .container
+        .row
+          .col.s12.m6
+            %h5.white-text Bolsa Pública de Valores Bicentenaria
+            %p.grey-text.text-lighten-4
+              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N
+              %br/
+              Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
+              %br/
+              %b Horario de atención al público:
+              De 8:00 a.m. a 4:30 p.m.
+              %br/
+              %b Teléfono:
+              0212-9558800.
+            %br/
+            %ul.social
+              %li
+                %h6 Redes Sociales:
+                %br/
+              %li
+                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/bolsapublicave/", :target => "_blank"}
+                %a.icon-twitter.img-circle{:href => "https://twitter.com/Bolsa_Publica", :target => "_blank"}
+                %a.icon-instagram.img-circle{:href => "https://www.instagram.com/bolsa_publica/", :target => "_blank"}
+          .col.l4.offset-l2.s12
+            %h5.white-text Menú
+            %ul
+              %li
+                %a.grey-text.text-lighten-3{:href => "LCFT.pdf", :target => "blank"} Prevención y control
+              %li
+                %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
+              %li
+                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Legal
+              %li
+                %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
+              %h5.white-text Enlaces de interés
+              %ul
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.bcv.org.ve", :target => "blank"} Banco Central de Venezuela
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve", :target => "blank"} Superintendencia Nacional de Valores
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.mppef.gob.ve", :target => "blank"} Ministerio del Poder Popular de Economía y Finanzas
+      .footer-copyright
+        .container
+          © 2017 Copyright Bolsa Pública de Valores Bicentenaria / RIF: G-20009677-2
+    %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
+    %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
+    :javascript
+      $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+      })
+
+      $(document).ready(function(){
+          $('.slider').slider();
+        });

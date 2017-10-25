@@ -1,0 +1,158 @@
+!!!
+%html
+  %head
+    = render 'app/layouts/head'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bolsa Pública
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/estilos.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+  %body
+    .col.l12
+      .cintillo
+        %img{:src => "assets/img/cintillo.jpg"}/
+    .navbar-fixed
+      %nav
+        .nav-wrapper.white
+          %a.brand-logo{:href => "/index"}
+            %img{:src => "assets/img/Logo_encabezado.png"}/
+          %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+            %i.material-icons menu
+          %ul.right.hide-on-med-and-down
+            %li
+              %a.grey-text.text-darken-4{:href => "/index"} Inicio
+            %li
+              %a.grey-text.text-darken-4{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
+            %li
+              %a.grey-text.text-darken-4{:href => "/estadisticas"} Estadísticas
+            %li
+              %a.grey-text.text-darken-4{:href => "/contacto"} Contácto
+          %ul#mobile-demo.side-nav
+            %li
+              %a{:href => "/index"} Inicio
+            %li
+              %a{:href => "Quienes_Somos.html"} Quienes Sómos
+            %li
+              %a{:href => "/tarifas"} Tarifas
+            %li
+              %a{:href => "/contacto"} Contácto
+            %li
+              %a{:href => "/estadisticas"} Estadísticas
+    .container.anidada
+      .row
+        .z-depth-5.shadow.col.s10.offset-s1
+          .col.s12
+            %img.responsive-img{:src => "assets/img/intermediacion.jpg"}/
+        .col.s12.m10.offset-m1.sombra.red.darken-4.white-text.center-align
+          %h5 PASOS BASICOS DE UNA OPERACIÓN OFERTA O DEMANDA
+        .col.s12.m6.cambio
+          .col.s12.m4.offset-m3.indigo.darken-4.sombra.center-align.white-text
+            %h5 DEMANDA
+          .col.s12
+            %ol.listinBlue
+              %li.lista
+                %h6 Envío de las ofertas del día al inversor.
+            %ol.listinBlue2
+              %li
+                %h6 Aprobación por parte del inversor de la oferta ofrecida por su promotor.
+            %ol.listinBlue3
+              %li
+                %h6 Pago de la operación (deposito o transferencia) por parte del inversor.
+            %ol.listinBlue4
+              %li
+                %h6 Envió de soportes de pago al promotor.
+            %ol.listinBlue5
+              %li
+                %h6 Envió de Orden de Compra y Confirmación al inversor una vez cumplido los tiempos (Fecha Valor).
+            %ol.listinBlue6
+              %li
+                %h6 Remisión de la Orden de Compra llenada, firmada y huella al promotor.
+        .col.s12.m6.cambio
+          .col.s12.m4.offset-m3.yellow.darken-2.sombra.center-align.white-text
+            %h5 OFERTA
+          .col.s12
+            %ol.listin
+              %li.lista
+                %h6 Manifestación de Intención de venta de sus posiciones y solicitud de precio por parte del inversor.
+            %ol.listin2
+              %li
+                %h6 Envió de información de precios sugeridos al inversor.
+            %ol.listin3
+              %li
+                %h6 Aprobación de Precio para la Venta por parte del inversor.
+            %ol.listin4
+              %li
+                %h6 Envió de Orden de Venta y Confirmación al inversor una vez cumplido los tiempos (Fecha Valor).
+            %ol.listin5
+              %li
+                %h6 Transferencia de fondos según instrucciones del inversor a su cuenta.
+        .col.s12.cambio
+          .col.s12.m2.red.darken-4.sombra2.center-align.white-text
+            %h5 NOTA:
+          .col.s12
+            %ul.listinSimple
+              %li
+                %h6 - El procesos de venta duración mínimo siete (7) días hábiles.
+              %li
+                %h6 - Fecha Pacto: Fecha en la cual se aprueba o confirma (pacto en firme) la operación por parte del inversor.
+              %li
+                %h6 - Fecha Valor: Fecha en la cual se cruza la operación, por lo que deberá estar el pago de la misma antes del día señalado.
+    %footer.page-footer
+      .container
+        .row
+          .col.s12.m6
+            %h5.white-text Bolsa Pública de Valores Bicentenaria
+            %p.grey-text.text-lighten-4
+              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N
+              %br/
+              Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
+              %br/
+              %b Horario de atención al público:
+              De 8:00 a.m. a 4:30 p.m.
+              %br/
+              %b Teléfono:
+              0212-9558800.
+            %br/
+            %ul.social
+              %li
+                %h6 Redes Sociales:
+                %br/
+              %li
+                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/bolsapublicave/", :target => "_blank"}
+                %a.icon-twitter.img-circle{:href => "https://twitter.com/Bolsa_Publica", :target => "_blank"}
+                %a.icon-instagram.img-circle{:href => "https://www.instagram.com/bolsa_publica/", :target => "_blank"}
+          .col.l4.offset-l2.s12
+            %h5.white-text Menú
+            %ul
+              %li
+                %a.grey-text.text-lighten-3{:href => "LCFT.pdf", :target => "blank"} Prevención y control
+              %li
+                %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
+              %li
+                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Legal
+              %li
+                %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
+              %h5.white-text Enlaces de interés
+              %ul
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.bcv.org.ve", :target => "blank"} Banco Central de Venezuela
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve", :target => "blank"} Superintendencia Nacional de Valores
+                %li
+                  %a.grey-text.text-lighten-3{:href => "http://www.mppef.gob.ve", :target => "blank"} Ministerio del Poder Popular de Economía y Finanzas
+      .footer-copyright
+        .container
+          © 2017 Copyright Bolsa Pública de Valores Bicentenaria / RIF: G-20009677-2
+    %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
+    %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
+    :javascript
+      $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+      })
+
+      $(document).ready(function(){
+          $('.slider').slider();
+        });
