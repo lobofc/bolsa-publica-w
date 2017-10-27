@@ -54,75 +54,75 @@
         - @indicators.each do |indicator|
           %span.indice= "#{indicator.name}:"
           =indicator.value
-
-    .csslider1.autoplay
-      %input#cs_slide1_0.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
-      %input#cs_slide1_1.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
-      %input#cs_slide1_2.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
-      %input#cs_play1.cs_anchor{:checked => "checked", :name => "cs_anchor1", :type => "radio"}/
-      %input#cs_pause1_0.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
-      %input#cs_pause1_1.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
-      %input#cs_pause1_2.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
-      %ul
-        %li.cs_skeleton
-          = image_tag @banners.last.banner, :style => "width: 100%;"
-        - @banners.each_with_index do |banner, index|
-          %li.img.slide{class: "num#{index}"}
-            = image_tag banner.banner
-      .cs_engine
-      .cs_description
-        %label.num0
-        %label.num1
-        %label.num2
-      .cs_play_pause
-        %label.cs_play{:for => "cs_play1"}
-          %span
-            %i
-            %b
-        %label.cs_pause.num0{:for => "cs_pause1_0"}
-          %span
-            %i
-            %b
-        %label.cs_pause.num1{:for => "cs_pause1_1"}
-          %span
-            %i
-            %b
-        %label.cs_pause.num2{:for => "cs_pause1_2"}
-          %span
-            %i
-            %b
-      .cs_arrowprev
-        %label.num0{:for => "cs_slide1_0"}
-          %span
-            %i
-            %b
-        %label.num1{:for => "cs_slide1_1"}
-          %span
-            %i
-            %b
-        %label.num2{:for => "cs_slide1_2"}
-          %span
-            %i
-            %b
-      .cs_arrownext
-        %label.num0{:for => "cs_slide1_0"}
-          %span
-            %i
-            %b
-        %label.num1{:for => "cs_slide1_1"}
-          %span
-            %i
-            %b
-        %label.num2{:for => "cs_slide1_2"}
-          %span
-            %i
-            %b
-      .cs_bullets
-        - @banners.each_with_index do |banner,index|
-          %label{class:"num#{index}", :for => "cs_slide1_#{index}"}
-            %span.cs_point
-            %span.cs_thumb
-              = image_tag banner.banner, style: "width:130px"
+    - if !@banners.blank?
+      .csslider1.autoplay
+        %input#cs_slide1_0.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
+        %input#cs_slide1_1.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
+        %input#cs_slide1_2.cs_anchor.slide{:name => "cs_anchor1", :type => "radio"}/
+        %input#cs_play1.cs_anchor{:checked => "checked", :name => "cs_anchor1", :type => "radio"}/
+        %input#cs_pause1_0.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
+        %input#cs_pause1_1.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
+        %input#cs_pause1_2.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
+        %ul
+          %li.cs_skeleton
+            = image_tag @banners.last.banner, :style => "width: 100%;"
+          - @banners.each_with_index do |banner, index|
+            %li.img.slide{class: "num#{index}"}
+              = image_tag banner.banner
+        .cs_engine
+        .cs_description
+          %label.num0
+          %label.num1
+          %label.num2
+        .cs_play_pause
+          %label.cs_play{:for => "cs_play1"}
+            %span
+              %i
+              %b
+          %label.cs_pause.num0{:for => "cs_pause1_0"}
+            %span
+              %i
+              %b
+          %label.cs_pause.num1{:for => "cs_pause1_1"}
+            %span
+              %i
+              %b
+          %label.cs_pause.num2{:for => "cs_pause1_2"}
+            %span
+              %i
+              %b
+        .cs_arrowprev
+          %label.num0{:for => "cs_slide1_0"}
+            %span
+              %i
+              %b
+          %label.num1{:for => "cs_slide1_1"}
+            %span
+              %i
+              %b
+          %label.num2{:for => "cs_slide1_2"}
+            %span
+              %i
+              %b
+        .cs_arrownext
+          %label.num0{:for => "cs_slide1_0"}
+            %span
+              %i
+              %b
+          %label.num1{:for => "cs_slide1_1"}
+            %span
+              %i
+              %b
+          %label.num2{:for => "cs_slide1_2"}
+            %span
+              %i
+              %b
+        .cs_bullets
+          - @banners.each_with_index do |banner,index|
+            %label{class:"num#{index}", :for => "cs_slide1_#{index}"}
+              %span.cs_point
+              %span.cs_thumb
+                = image_tag banner.banner, style: "width:130px"
     .row
       .col.s12.m6.fondo.product
         %h2 PRODUCTOS

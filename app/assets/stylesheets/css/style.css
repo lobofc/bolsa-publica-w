@@ -15,9 +15,9 @@
 .csslider1 {
   display: inline-block;
   position: relative;
-  
+
   height: 600px;
-  
+
 
   width: 100%;
 }
@@ -136,11 +136,11 @@
 .csslider1 > #cs_slide1_0:checked ~ .cs_arrowprev > label.num2,
 .csslider1 > #cs_pause1_0:checked ~ .cs_arrowprev > label.num2,
 .csslider1 > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,
-.csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1, 
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1,
 .csslider1 > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,
 .csslider1 > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,
 .csslider1 > #cs_slide1_1:checked ~ .cs_arrownext > label.num2,
-.csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num2, 
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num2,
 .csslider1 > #cs_slide1_2:checked ~ .cs_arrowprev > label.num1,
 .csslider1 > #cs_pause1_2:checked ~ .cs_arrowprev > label.num1,
 .csslider1 > #cs_slide1_2:checked ~ .cs_arrownext > label.num0,
@@ -333,11 +333,11 @@
   top: 0;
   opacity: 0;
   z-index: 1;
-  
+
   -webkit-transition: opacity 2000ms ease;
   transition: opacity 2000ms ease;
 
-  
+
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
@@ -530,8 +530,8 @@
   padding: 5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 0 2px transparent; 
-  
+  box-shadow: 0 0 0 2px transparent;
+
   -webkit-transition: box-shadow .4s, background .4s;
   transition: box-shadow .4s, background .4s;
 }
@@ -572,7 +572,7 @@
 .csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2,
 .csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2 {
   background: transparent;
-  box-shadow: 0 0 0 2px #fff; 
+  box-shadow: 0 0 0 2px #fff;
 }
 
 
@@ -671,7 +671,7 @@
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  
+
   -webkit-transform: scale(0);
   transform: scale(0);
 
@@ -690,23 +690,23 @@
   font-size: 0.8em;
   margin: 5px 10px;
 
-  
+
 
   opacity: 0;
   visibility: hidden;
   z-index: 1;
-  
+
   -webkit-transform: scale(0);
   transform: scale(0);
 
   -webkit-transition:
-    500ms opacity 850ms ease, 
-    500ms -webkit-transform 850ms ease, 
+    500ms opacity 850ms ease,
+    500ms -webkit-transform 850ms ease,
     500ms visibility 850ms ease;
   transition:
-    500ms opacity 850ms ease, 
-    500ms -webkit-transform 850ms ease, 
-    500ms transform 850ms ease, 
+    500ms opacity 850ms ease,
+    500ms -webkit-transform 850ms ease,
+    500ms transform 850ms ease,
     500ms visibility 850ms ease;
 }
 
@@ -842,7 +842,7 @@ only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
 only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
 only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
 only screen and (                max-resolution: 192dpi) and (max-width: 480px),
-only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) {
   .csslider1 > .cs_description,
   .csslider1 > .cs_bullets {
     display: none;
