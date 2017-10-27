@@ -6,8 +6,8 @@ body {
  		position: relative;
  	}
  	.seccion {
- 		padding-top: 3%; 		
- 	}  
+ 		padding-top: 3%;
+ 	}
 
 body {
  		position: relative;
@@ -19,14 +19,14 @@ body {
 	height: auto;
 	position:fixed;
 	z-index:700;
-	top:0;  		
+	top:0;
 }
 
 @media screen and (max-width:600px) {
 .brand-logo img {
 	width: 140px;
 	height: 75px;
-	}	
+	}
 }
 .indice {
 	color: #ffa726;
@@ -35,7 +35,7 @@ body {
 
 .marquee {
 	width: 100%;
-	height: auto;		
+	height: auto;
   background-color: #000;
   padding-top: 3px;
   padding-bottom: 40px;
@@ -50,7 +50,7 @@ body {
 	animation-timing-function: linear;
 	animation-delay: 0;
 	animation-iteration-count: infinite;
-	position: absolute;		
+	position: absolute;
 }
 
 .marquee p:hover {
@@ -65,7 +65,7 @@ body {
 @media screen and (max-width:600px) {
 .marquee {
 	margin-top: 7px;
-	}	
+	}
 }
 
 .image img {
@@ -104,7 +104,7 @@ body {
 @media screen and (max-width:1100px) {
     .title_slide1 {
       left: 11%;
-    }   
+    }
 }
 
 @media screen and (max-width:1050px) {
@@ -114,7 +114,7 @@ body {
 
     .title_slide3 {
       top: 6%;
-    }  
+    }
 
     h3 {
        font-size: 2.55rem;
@@ -122,7 +122,7 @@ body {
 
     h5 {
       font-size: 1.55rem;
-    }       
+    }
 }
 
 @media screen and (max-width:950px) {
@@ -132,7 +132,7 @@ body {
 
     .title_slide3 {
       top: 4%;
-    }  
+    }
 
     h3 {
        font-size: 2.60rem;
@@ -150,7 +150,7 @@ body {
 
     .title_slide1 {
       top: 9%;
-    }  
+    }
 
     h3 {
        font-size: 2.50rem;
@@ -158,13 +158,13 @@ body {
 
     h5 {
       font-size: 1.40rem;
-    }       
+    }
 }
 
 @media screen and (max-width:860px) {
     .title_slide1 {
       left: 7%;
-    } 
+    }
 
     .title_slide2 {
       left: 22%;
@@ -172,7 +172,7 @@ body {
 
     .title_slide3 {
       top: 2%;
-    } 
+    }
 
     h3 {
        font-size: 2.40rem;
@@ -180,13 +180,13 @@ body {
 
     h5 {
       font-size: 1.30rem;
-    }       
+    }
 }
 
 @media screen and (max-width:800px) {
     .title_slide1 {
       left: 6%;
-    } 
+    }
 
     .title_slide2 {
       left: 24%;
@@ -198,13 +198,13 @@ body {
 
     h5 {
       font-size: 1.20rem;
-    }       
+    }
 }
 
-@media screen and (max-width:750px) { 
+@media screen and (max-width:750px) {
     .title_slide3 {
       top: 0%;
-    } 
+    }
 
     h3 {
        font-size: 2.20rem;
@@ -212,10 +212,10 @@ body {
 
     h5 {
       font-size: 1.10rem;
-    }       
+    }
 }
 
-@media screen and (max-width:700px) {    
+@media screen and (max-width:700px) {
     .title_slide2 {
       left: 26%;
     }
@@ -226,24 +226,24 @@ body {
 
     h5 {
       font-size: 1.0rem;
-    }       
+    }
 }
 
 @media screen and (max-width:650px) {
     .title_slide1 {
       left: 4%;
-    } 
+    }
 
     .title_slide1 {
       top: 7%;
-    } 
+    }
 
     .title_slide2 {
       top: 10%;
-    }        
+    }
 }
 
-@media screen and (max-width:600px) {   
+@media screen and (max-width:600px) {
 
     h3 {
        font-size: 1.85rem;
@@ -251,13 +251,13 @@ body {
 
     h5 {
       font-size: 0.85rem;
-    }       
+    }
 }
 
-@media screen and (max-width:550px) {   
+@media screen and (max-width:550px) {
     .title_slide2 {
       top: 8%;
-    } 
+    }
 
     h3 {
        font-size: 1.70rem;
@@ -265,10 +265,10 @@ body {
 
     h5 {
       font-size: 0.70rem;
-    }       
+    }
 }
 
-@media screen and (max-width:520px) {   
+@media screen and (max-width:520px) {
 
     h3 {
        font-size: 1.55rem;
@@ -276,17 +276,17 @@ body {
 
     h5 {
       font-size: 0.70rem;
-    }       
+    }
 }
 
-@media screen and (max-width:480px) { 
+@media screen and (max-width:480px) {
     .title_slide1 {
       left: 3%;
-    } 
+    }
 
     .title_slide1 {
       top: 5%;
-    }    
+    }
 
     h3 {
        font-size: 1.45rem;
@@ -294,10 +294,10 @@ body {
 
     h5 {
       font-size: 0.70rem;
-    }       
+    }
 }
 
-@media screen and (max-width:440px) {   
+@media screen and (max-width:440px) {
 
     h3 {
        font-size: 1.30rem;
@@ -305,23 +305,23 @@ body {
 
     h5 {
       font-size: 0.60rem;
-    }       
+    }
 }
 
-@media screen and (max-width:400px) {   
+@media screen and (max-width:400px) {
     .title_slide2 {
       top: 6%;
-    } 
+    }
 
     h3 {
        font-size: 1.20rem;
-    }          
+    }
 }
 
-@media screen and (max-width:380px) {   
+@media screen and (max-width:380px) {
     .title_slide1 {
       top: 3%;
-    } 
+    }
 
     h3 {
        font-size: 1.10rem;
@@ -329,13 +329,13 @@ body {
 
     h5 {
       font-size: 0.55rem;
-    }       
+    }
 }
 
-@media screen and (max-width:360px) {   
+@media screen and (max-width:360px) {
     .title_slide1 {
       top: 0%;
-    } 
+    }
 
     h3 {
        font-size: 1.0rem;
@@ -343,29 +343,29 @@ body {
 
     h5 {
       font-size: 0.45em;
-    }       
+    }
 }
 
-@media screen and (max-width:340px) {   
+@media screen and (max-width:340px) {
     .title_slide2 {
       top: 1%;
-    } 
+    }
 
     h3 {
        font-size: 0.96rem;
     }
 
     h5 {
-      font-size: 0.406em;      
-    }       
+      font-size: 0.406em;
+    }
 }
 
 .imageEspecial img {
   width: 100%;
   height: auto;
-  padding-top: 35px; 
+  padding-top: 35px;
   padding-left: 35px;
-  padding-right: 35px; 
+  padding-right: 35px;
 }
 
 .imagenEspecial2 {
@@ -391,44 +391,44 @@ body {
 
 .redSocial img {
   width: 100%;
-  height: auto;  
-} 
+  height: auto;
+}
 
 .redSocial a {
   width: 100%;
-  height: auto;  
-} 
+  height: auto;
+}
 
 .redSocial iframe {
   width: 100%;
-  height: 370px;    
-} 
+  height: 370px;
+}
 
-.shadow {     
+.shadow {
   margin-bottom: 8%;
 }
 
-.shadow h5 {      
+.shadow h5 {
   padding-top: 2%;
 }
 
-.shadow p {      
+.shadow p {
   padding-bottom: 2%;
 }
 
-.alto {  
+.alto {
   text-align: center;
 }
 
 .medio p {
   text-align: center;
-  font-weight: bold; 
+  font-weight: bold;
   margin-top: 10%;
-  margin-bottom: %; 
+  /*margin-bottom: %; */
 }
 
 .izquierda {
-   border: 1px solid; 
+   border: 1px solid;
 }
 
 .cuadro h6 {
@@ -444,23 +444,23 @@ body {
 }
 
 .cuadro h5 {
-  padding: 5%;  
+  padding: 5%;
 }
 
 .cuadro2 h5 {
-  padding: 9% 5% 9% 5%;  
+  padding: 9% 5% 9% 5%;
 }
 
 .cuadro3 h5 {
-  padding: 17% 5% 17% 5%;  
+  padding: 17% 5% 17% 5%;
 }
 
 .cuadro4 h5 {
-  padding: 17% 5% 17% 5%;  
+  padding: 17% 5% 17% 5%;
 }
 
 .cuadro5 h5 {
-  padding: 13% 5% 13% 5%;  
+  padding: 13% 5% 13% 5%;
 }
 
 .contVenetaja {
@@ -471,7 +471,7 @@ body {
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  z-index: 1;  
+  z-index: 1;
 }
 
 .titulo h3 {
@@ -552,7 +552,7 @@ body {
 
 .requisito {
   margin-top: 2%;
-  margin-bottom: 2%;  
+  margin-bottom: 2%;
 }
 
 .border {
@@ -577,7 +577,7 @@ body {
 
 .borderList {
   border: 2px solid #616161;
-  border-radius: 0px 0px 15px 15px;    
+  border-radius: 0px 0px 15px 15px;
 }
 
 .margenList {
@@ -586,20 +586,20 @@ body {
 
 .marginTitle {
   margin-top: 40px;
-  margin-bottom: 40px;  
+  margin-bottom: 40px;
 }
 
 .box {
   margin-top: 5%;
   margin-bottom: 50px;
-  border-radius: 0px 25px 0px 25px;  
+  border-radius: 0px 25px 0px 25px;
 }
 
 .redondIcon {
  width: 50%;
- height: 50%; 
+ height: 50%;
  margin-left: 25%;
- margin-top: 12%; 
+ margin-top: 12%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -608,7 +608,7 @@ body {
 .box1 {
   margin-top: 5%;
   margin-bottom: 50px;
-  border-radius: 0px 25px 0px 25px;  
+  border-radius: 0px 25px 0px 25px;
 }
 
 .box1 p {
@@ -622,21 +622,21 @@ body {
 }
 
 .sombra {
-  border-radius: 25px 25px 25px 25px;  
-  margin-bottom: 4%;  
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 4%;
 }
 
 .sombra h5 {
-  padding: 2%;  
+  padding: 2%;
 }
 
 .sombra2 {
-  border-radius: 25px 25px 25px 25px;  
-  margin-bottom: 1%;  
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 1%;
 }
 
 .sombra2 h5 {
-  padding: 2%;  
+  padding: 2%;
 }
 
 .lista i {
@@ -649,11 +649,11 @@ body {
 
 .cambio h6 {
   font-size: 18px;
-  line-height: normal;  
+  line-height: normal;
 }
 
 .cambio p {
-  font-size: 18px;  
+  font-size: 18px;
 }
 
 .listinSimple li {
@@ -736,14 +736,14 @@ body {
 }
 
 .social {
-  float: left;   
+  float: left;
 }
 
-.social ul {  
-  list-style:none;  
+.social ul {
+  list-style:none;
 }
 
-.social a {  
+.social a {
   display:inline-block;
   color: #000;
   background:#000;
@@ -754,7 +754,7 @@ body {
   transition: all 500ms ease;
 }
 
-.social a:hover {    
+.social a:hover {
      background: #d0da2b;
   }
 
@@ -785,14 +785,14 @@ body {
   background-size: auto;
  }
 
- .product h2 {   
-   padding-bottom: 1%;   
+ .product h2 {
+   padding-bottom: 1%;
    font-weight: bold;
    margin-left: 22%;
  }
 
- .product2 h2 {   
-   padding-bottom: 1%;   
+ .product2 h2 {
+   padding-bottom: 1%;
    font-weight: bold;
    margin-left: 15%;
  }
@@ -817,27 +817,22 @@ body {
    text-align: center;
  }
 
- .fontTable h6 {    
+ .fontTable h6 {
     padding-top: 15%;
-    padding-bottom: 36%;    
+    padding-bottom: 36%;
  }
 
- .fontTable2 h6 {    
+ .fontTable2 h6 {
     padding-top: 15%;
-    padding-bottom: 26%;    
+    padding-bottom: 26%;
  }
 
  .linkModulo {
-    padding: 2%;   
+    padding: 2%;
  }
 
-.titleRedes h6 {  
+.titleRedes h6 {
   padding-top: 4%;
   padding-left: 10%;
   padding-bottom: 4%;
 }
-
-
-
-
-
