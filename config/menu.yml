@@ -27,13 +27,13 @@ menu:
   indicator:
     name: indicators
     url_path: /admin/indicators
-    icon: insert_chart
+    icon: trending_up
     current: ['admin/indicators']
     model: Indicator
   banner:
     name: banners
     url_path: /admin/banners
-    icon: insert_chart
+    icon: perm_media
     current: ['admin/banners']
     model: Banner
   user:
