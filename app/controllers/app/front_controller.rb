@@ -6,6 +6,11 @@ module App
     def custodia
     end
 
+    def estadisticas
+      @indicators = Indicator.all
+      @banners = Banner.last(3)
+    end
+
     def mercadosecundario
     end
 
