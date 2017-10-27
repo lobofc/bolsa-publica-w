@@ -1,6 +1,7 @@
 es:
   keppler:
     sidebar-menu:
+      charts: Charts
       banners: Banners
       indicators: Indicators
       customizes: Customizes
@@ -25,6 +26,7 @@ es:
         categories: Categorías
     models:
       singularize:
+        chart: chart
         banner: banner
         indicator: indicator
         customize: customize
@@ -35,6 +37,7 @@ es:
         configuration: configuración
         user: usuario
       pluralize:
+        charts: charts
         banners: banners
         indicators: indicators
         customizes: customizes
@@ -45,6 +48,7 @@ es:
         configurations: configuraciones
         user: usuarios
     modules:
+      admin/charts: Charts
       admin/banners: Banners
       admin/indicators: Indicators
       admin/customizes: Customizes

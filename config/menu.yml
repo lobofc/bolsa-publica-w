@@ -25,7 +25,7 @@ menu:
     current: ['admin/google_analytics_tracks']
     model: GoogleAnalyticsTrack
   indicator:
-    name: indicators
+    name: Indicadores
     url_path: /admin/indicators
     icon: trending_up
     current: ['admin/indicators']
@@ -36,6 +36,12 @@ menu:
     icon: perm_media
     current: ['admin/banners']
     model: Banner
+  chart:
+    name: charts
+    url_path: /admin/charts
+    icon: timeline
+    current: ['admin/charts']
+    model: Chart
   user:
     name: users
     url_path: /admin/users
