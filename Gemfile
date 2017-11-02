@@ -8,6 +8,10 @@ gem 'angularjs-rails'
 gem 'nprogress-rails'
 gem 'ckeditor'
 
+#charts
+gem "chartkick"
+gem 'groupdate'
+
 # Documentation
 gem 'sdoc', '~> 0.4.0', group: :doc
 

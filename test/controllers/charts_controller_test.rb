@@ -18,7 +18,7 @@ class ChartsControllerTest < ActionController::TestCase
 
   test "should create chart" do
     assert_difference('Chart.count') do
-      post :create, chart: { value: @chart.value }
+      post :create, chart: { file: @chart.file, name: @chart.name }
     end
 
     assert_redirected_to chart_path(assigns(:chart))
@@ -35,7 +35,7 @@ class ChartsControllerTest < ActionController::TestCase
   end
 
   test "should update chart" do
-    patch :update, id: @chart, chart: { value: @chart.value }
+    patch :update, id: @chart, chart: { file: @chart.file, name: @chart.name }
     assert_redirected_to chart_path(assigns(:chart))
   end
 

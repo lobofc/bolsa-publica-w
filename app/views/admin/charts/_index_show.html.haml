@@ -8,6 +8,7 @@
 		= t("keppler.models.singularize.#{controller_name.singularize}")
 .listing-show-body.card{ resize: true , style: "height: {{windowHeight}}px;" }
 	.card-content
+		%center.color-title= @chart.name.to_s.humanize
 		%table.bordered
 			%tbody
 				%tr
@@ -17,9 +18,14 @@
 						.display-value.fs-body-1.tc-black-2= @chart.id
 				%tr
 					%th
-						.display-label= t("activerecord.attributes.#{controller_name.singularize}.value")
+						.display-label= t("activerecord.attributes.#{controller_name.singularize}.name")
 					%td
-						.display-value.fs-body-1.tc-black-2= @chart.value.blank? ? '----------' : @chart.value
+						.display-value.fs-body-1.tc-black-2= @chart.name.blank? ? '----------' : @chart.name
+				%tr
+					%th
+						.display-label= t("activerecord.attributes.#{controller_name.singularize}.file")
+					%td
+						.display-value.fs-body-1.tc-black-2= @chart.file.blank? ? '----------' : @chart.file
 		%table.bordered
 			%tbody
 				%td

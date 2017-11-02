@@ -8,7 +8,7 @@ module App
 
     def estadisticas
       @indicators = Indicator.all
-      @banners = Banner.last(3)
+      @banners = Banner.all.last
     end
 
     def mercadosecundario

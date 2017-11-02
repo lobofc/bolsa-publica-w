@@ -16,6 +16,7 @@ Rails.application.routes.draw do
    get '/mercadosecundario', to: 'app/front#mercadosecundario', as: :app_mercadosecundario
    get '/custodia', to: 'app/front#custodia', as: :app_custodia
    get '/estadisticas', to: 'app/front#estadisticas', as: :app_estadisticas
+   get '/admin/chart/un_chart/:id', to: 'admin/charts#un_chart', as: :un_chart
   root to: 'app/front#index'
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise

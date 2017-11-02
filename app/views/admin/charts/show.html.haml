@@ -1,3 +1,4 @@
+%script{:src => "https://code.highcharts.com/stock/modules/exporting.js"}
 = title(t('keppler.titles.show', model: "Charts"))
 .wrapper
 	.wrapper-body.container
@@ -12,6 +13,7 @@
 				= material_icon.md_18.arrow_back.css_class("md-dark")
 		.card
 			.card-content
+				%center.color-title= @chart.name.to_s.humanize
 				%table.bordered
 					%tbody
 						%tr
@@ -21,6 +23,14 @@
 								.display-value.fs-body-1.tc-black-2= @chart.id.to_s.humanize
 						%tr
 							%th
-								.display-label= t("activerecord.attributes.#{controller_name.singularize}.value")
+								.display-label Nombre
 							%td
-								.display-value.fs-body-1.tc-black-2= @chart.value.blank? ? '----------' : @chart.value
+								.display-value.fs-body-1.tc-black-2= @chart.name.blank? ? '----------' : @chart.name
+						%tr
+							%th
+								.display-label Archivo
+							%td
+								.display-value.fs-body-1.tc-black-2= @chart.file.blank? ? '----------' : @chart.file.to_s.split("/").last
+			= un_chart(@chart.id)
+:scss
+	th{width:20%;}
