@@ -10,6 +10,7 @@ gem 'ckeditor'
 
 #charts
 gem "chartkick"
+gem 'highstock-rails'
 gem 'groupdate'
 
 # Documentation

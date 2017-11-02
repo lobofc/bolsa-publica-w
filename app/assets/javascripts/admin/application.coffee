@@ -13,6 +13,7 @@
 #= require cocoon
 #= require turbolinks
 #= require jquery.minicolors
+#= require highstock
 #= require highcharts
 #= require chartkick
 #= require_tree .

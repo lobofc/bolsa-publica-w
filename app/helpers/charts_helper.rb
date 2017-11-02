@@ -1,21 +1,26 @@
 module ChartsHelper
   def un_chart(chart)
     graph = Chart.find(chart)
-    line_chart un_chart_path, download: true, stacked: true, library: {
+    line_chart un_chart_path, library: {
         title: {text: "#{graph.name}", x: -20},
         yAxis: {
             title: {
-                text: 'Sporters count'
+                text: 'Datos'
             }
         },
         xAxis: {
+            type: 'datetime',
             title: {
-                text: 'Country'
+                text: 'Datos'
             }
         },
         navigator: {
-            enabled: true
-        }
+            enabled: true,
+            adaptToUpdatedData: false,
+            series: {
+                data: "Hola"
+            }
+        },
     }
   end
 end
