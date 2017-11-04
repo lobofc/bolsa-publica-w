@@ -33,7 +33,7 @@ module Admin
       @graph = Chart.find(params[:id])
       data = File.open("#{@graph.file.path}").read
       @result = CSV.parse(data)
-      render json: [{name: 'Datos 1', data: @result.reverse}]
+      @token = render json: [{name: 'Datos 1', data: @result.reverse}]
     end
 
     # GET /charts/1

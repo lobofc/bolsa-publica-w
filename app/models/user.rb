@@ -13,6 +13,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def destroy
+    super if should_destroy?
+  end
+
+  def update
+    super if should_update?
+  end
+
   def rol
     roles.first.name
   end
@@ -29,6 +37,13 @@ class User < ActiveRecord::Base
   end
 
   private
+  def should_destroy?
+    id != 1
+  end
+
+  def should_update?
+    id != 1
+  end
 
   def create_permalink
     self.permalink = name.downcase.parameterize + '-' + SecureRandom.hex(4)

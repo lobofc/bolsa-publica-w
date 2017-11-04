@@ -16,7 +16,7 @@
 end
 
 User.create(
-  name: 'Admin', email: 'admin@keppler.com', password: '12345678',
+  name: 'admin', email: 'admin@keppler.com', password: '12345678',
   password_confirmation: '12345678', role_ids: '1'
 )
 

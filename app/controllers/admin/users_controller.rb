@@ -19,6 +19,9 @@ module Admin
     end
 
     def show
+      if @user.id.eql?(1)
+        redirect_to admin_users_path, notice: "El usuario Admin, no puede ser editado"
+      end
     end
 
     def edit
@@ -29,7 +32,9 @@ module Admin
         value.blank?
       end
 
-      if @user.update_attributes(update_attributes)
+      if @user.id.eql?(1)
+        redirect_to admin_users_path, notice: "El usuario Admin, no puede ser editado"
+      elsif @user.update_attributes(update_attributes)
         redirect(@user, params)
       else
         render action: 'edit'
@@ -48,16 +53,27 @@ module Admin
     end
 
     def destroy
-      @user.destroy
-      redirect_to admin_users_path, notice: actions_messages(@user)
+      if @user.destroy.nil?
+        redirect_to admin_users_path, notice: "El usuario Admin, no puede ser borrado"
+      else
+        redirect_to admin_users_path, notice: actions_messages(@user)
+      end
     end
 
     def destroy_multiple
-      User.destroy redefine_ids(params[:multiple_ids])
-      redirect_to(
-        admin_users_path(page: @current_page, search: @query),
-        notice: actions_messages(User.new)
-      )
+      if params[:multiple_ids][1].eql?('1')
+        User.destroy redefine_ids(params[:multiple_ids])
+        redirect_to(
+          admin_users_path(page: @current_page, search: @query),
+          notice: "El usuario Admin, no puede ser borrado"
+        )
+      else
+        User.destroy redefine_ids(params[:multiple_ids])
+        redirect_to(
+          admin_users_path(page: @current_page, search: @query),
+          notice: actions_messages(User.new)
+        )
+      end
     end
 
     private

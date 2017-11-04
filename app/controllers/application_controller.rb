@@ -23,11 +23,12 @@ class ApplicationController < ActionController::Base
     }
   end
 
+
   private
 
   # block access dashboard
   def dashboard_access
-    unless [:admin].include? current_user.rol.to_sym
+    unless [:admin, :client].include? current_user.rol.to_sym
       raise CanCan::AccessDenied.new(
         t('keppler.messages.not_authorized_page'), :index, :dashboard
       )
@@ -52,6 +53,10 @@ class ApplicationController < ActionController::Base
 
   def get_history(model)
     if current_user.has_role? :admin
+      @activities = PublicActivity::Activity.where(
+        trackable_type: model.to_s
+      ).order('created_at desc').limit(50)
+    elsif current_user.has_role? :client
       @activities = PublicActivity::Activity.where(
         trackable_type: model.to_s
       ).order('created_at desc').limit(50)
