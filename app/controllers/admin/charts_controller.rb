@@ -33,17 +33,17 @@ module Admin
 
       @graph = Chart.find(params[:id])
 
-      options = { col_sep: '|', converters: :numeric, headers: true }
-      CSV.foreach(@graph.file.path, options) do |row|
-        filename = "#{row['date,market1,market2'].downcase}.json"
-        @data << JSON.pretty_generate(row.to_hash)
-      end
+      # options = { col_sep: '|', converters: :numeric, headers: true }
+      # CSV.foreach(@graph.file.path, options) do |row|
+      #   filename = "#{row['date,market1,market2'].downcase}.json"
+      #   @data << JSON.pretty_generate(row.to_hash)
+      # end
 
 
 
       @data = File.open("#{@graph.file.path}").read
-      # @result = CSV.parse(data)
-      # @datos = @result.shift
+      @result = CSV.parse(data)
+      @datos = @result.shift
       @token = render json: [{name: 'Datos 1', data: CSV.parse(@data)}]
     end
 
