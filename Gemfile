@@ -50,7 +50,7 @@ gem 'bourbon'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'material_icons'
-gem 'materialize-sass', '0.97.1'
+gem 'materialize-sass'
 
 # Authentication and Authorization
 gem 'devise'

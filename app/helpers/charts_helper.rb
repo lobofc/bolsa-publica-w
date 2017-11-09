@@ -1,7 +1,19 @@
 module ChartsHelper
+  def convert_to_amcharts_json(data_array)
+    graph = Chart.find(data_array)
+    @data = []
+    options = { col_sep: '|', converters: :numeric, headers: true }
+    CSV.foreach(graph.file.path, options) do |row|
+      filename = "#{row['date,market1,market2'].downcase}.json"
+      @data << JSON.pretty_generate(row.to_hash)
+    end
+    byebug
+    @data.to_json.gsub(/\"text\"/, "text").html_safe
+  end
+
   def un_chart(chart)
     graph = Chart.find(chart)
-    line_chart un_chart_path, colors: ["#f45b5b", "#90ee7e"], library: {
+    line_chart un_chart_path, width: "930px", height: "500px",  colors: ["#f45b5b", "#90ee7e"], library: {
         # chart: {
         #     type: 'spline'
         # },

@@ -21,6 +21,12 @@ module App
     def persona
     end
 
+    def aplicacion
+    end
+
+    def calculadora
+    end
+
     def tarifas
     end
 
