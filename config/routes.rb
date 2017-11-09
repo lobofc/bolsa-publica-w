@@ -122,4 +122,5 @@ Rails.application.routes.draw do
 
   # Dashboard route engine
   mount KepplerGaDashboard::Engine, at: 'admin/dashboard', as: 'dashboard'
+  mount KepplerContactUs::Engine, :at => '/', as: 'messages'
 end

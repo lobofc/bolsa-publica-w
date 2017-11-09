@@ -2,6 +2,7 @@ module App
   # FrontsController
   class FrontController < AppController
     layout 'layouts/templates/application'
+    before_action :keppler_mailer
 
     def custodia
     end
@@ -56,6 +57,11 @@ module App
     end
 
     def cssslider
+    end
+
+    private
+    def keppler_mailer
+      @message = KepplerContactUs::Message.new
     end
 
   end

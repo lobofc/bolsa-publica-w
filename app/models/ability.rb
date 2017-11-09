@@ -6,7 +6,8 @@ class Ability
     user ||= User.new # guest user (not logged in)
 
     if user.has_role? :admin
-
+      can :manage, KepplerContactUs::Message
+      can :manage, KepplerContactUs::MessageSetting
       # - Chart authorize -
       can :manage, Chart
 
@@ -41,6 +42,8 @@ class Ability
       end
 
     elsif user.has_role? :client
+      can :manage, KepplerContactUs::Message
+      can :manage, KepplerContactUs::MessageSetting
       # - Chart authorize -
       can :manage, Chart
 

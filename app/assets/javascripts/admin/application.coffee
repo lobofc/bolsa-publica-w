@@ -13,7 +13,7 @@
 #= require cocoon
 #= require turbolinks
 #= require jquery.minicolors
-#= require highstock
 #= require highcharts
 #= require chartkick
+#= require keppler_contact_us/application
 #= require_tree .

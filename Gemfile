@@ -89,3 +89,6 @@ end
 #---- keppler_ga_dashboard ----
 gem 'keppler_ga_dashboard', git: 'https://github.com/SliceDevelopers/keppler_ga_dashboard.git', tag: "1.0.0"
 gem 'google-api-client', '~> 0.7.1'
+
+gem 'keppler_contact_us', git: "https://github.com/SliceDevelopers/keppler_contact_us.git", tag: '1.0.0'
+gem "recaptcha", require: "recaptcha/rails"

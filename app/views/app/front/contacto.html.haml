@@ -15,7 +15,7 @@
     .navbar-fixed
       %nav
         .nav-wrapper.white
-          %a.brand-logo{:href => "/index"}
+          %a.brand-logo{:href => "index.html"}
             %img{:src => "assets/img/Logo_encabezado.png"}/
           %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
             %i.material-icons menu
@@ -23,7 +23,7 @@
             %li
               %a.grey-text.text-darken-4{:href => "/index"} Inicio
             %li
-              %a.grey-text.text-darken-4{:href => "Quienes_Somos.html"} Quienes Somos
+              %a.grey-text.text-darken-4{:href => "/quienessomos"} Quienes Somos
             %li
               %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
             %li
@@ -32,35 +32,21 @@
               %a.grey-text.text-darken-4{:href => "/contacto"} Contacto
           %ul#mobile-demo.side-nav
             %li
-              %a{:href => "/index"} Inicio
+              %a{:href => "index.html"} Inicio
             %li
-              %a{:href => "Quienes_Somos.html"} Quienes Somos
+              %a{:href => "/quienessomos"} Quienes Sómos
             %li
-              %a{:href => "/tarifas"} Tarifas
+              %a{:href => "Tarifas.html"} Tarifas
             %li
-              %a{:href => "/contacto"} Contacto
+              %a{:href => "Contacto.html"} Contácto
             %li
-              %a{:href => "/estadisticas"} Estadísticas
+              %a{:href => "Estadisticas.html"} Estadísticas
     .container.tablaMargen
       .row
         .col.s12.m10
-          %h3.marginTitle Contacto
-        %form.col.s12.m6
-          .row
-            .input-field.col.s12.m6
-              %i.material-icons.prefix account_circle
-              %input#icon_prefix.validate{:type => "text"}/
-              %label{:for => "icon_prefix"} Nombre
-            .input-field.col.s12.m6
-              %i.material-icons.prefix mail
-              %input#mail.validate{:type => "text"}/
-              %label{:for => "mail"} EMAIL
-            .input-field.col.s12
-              %i.material-icons.prefix mode_edit
-              %textarea#icon_prefix2.materialize-textarea
-              %label{:for => "icon_prefix2"} Mensaje
-            .col.s12
-              %input.col.s12.red.darken-4.white-text{:type => "submit"}/
+          %h3.marginTitle#contacto_k Contacto
+        = render "keppler_contact_us/messages/form"
+
         .col.s12.m6.datos
           %ul
             %li
@@ -76,6 +62,8 @@
               %p.grey-text.text-darken-4
                 %b Correo Electrónico:
                 bpvboac@gmail.com
+      %div
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2332.7007752553764!2d-66.8649368387823!3d10.491249721072316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58fdafcdd757%3A0xd2bf02cc07ec0ce7!2sTorre+Europa%2C+Avenida+Francisco+de+Miranda%2C+Caracas+1060%2C+Miranda!5e0!3m2!1ses!2sve!4v1508472603179", :style => "border:0", :width => "800"}
     %footer.page-footer
       .container
         .row

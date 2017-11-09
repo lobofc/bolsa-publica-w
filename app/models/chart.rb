@@ -4,6 +4,8 @@ class Chart < ActiveRecord::Base
   include CloneRecord
   mount_uploader :file, AttachmentUploader
 
+  validates_presence_of :file, :name
+
   # Fields for the search form in the navbar
   def self.search_field
     :name_or_file_cont
