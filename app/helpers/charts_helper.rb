@@ -1,7 +1,7 @@
 module ChartsHelper
   def un_chart(chart)
     graph = Chart.find(chart)
-    line_chart un_chart_path, width: "930px", height: "600px", colors: ["#f45b5b", "#90ee7e"], library: {
+    line_chart un_chart_path, colors: ["#f45b5b", "#90ee7e"], library: {
         # chart: {
         #     type: 'spline'
         # },

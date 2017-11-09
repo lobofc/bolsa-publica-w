@@ -31,19 +31,20 @@ module Admin
       # @result2 = CSV.parse(data2)
       # render json: [{name: 'Count', data: @result1},{name: 'Count', data: @result2}]
 
-      @data = []
       @graph = Chart.find(params[:id])
 
+      options = { col_sep: '|', converters: :numeric, headers: true }
       CSV.foreach(@graph.file.path, options) do |row|
-        filename = "#{row['fecha,precio_compra'].downcase}.json"
+        filename = "#{row['date,market1,market2'].downcase}.json"
         @data << JSON.pretty_generate(row.to_hash)
       end
 
-      byebug
 
-      data = File.open("#{@graph.file.path}").read
-      @result = CSV.parse(data)
-      @token = render json: [{name: 'Datos 1', data: @result.reverse}]
+
+      @data = File.open("#{@graph.file.path}").read
+      # @result = CSV.parse(data)
+      # @datos = @result.shift
+      @token = render json: [{name: 'Datos 1', data: CSV.parse(@data)}]
     end
 
     # GET /charts/1
