@@ -3,6 +3,8 @@ module App
   class FrontController < AppController
     layout 'layouts/templates/application'
     before_action :keppler_mailer
+    require 'csv'
+    require 'json'
 
     def custodia
     end
