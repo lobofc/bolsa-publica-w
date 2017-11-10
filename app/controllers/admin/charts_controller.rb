@@ -44,7 +44,7 @@ module Admin
       data = File.open("#{@graph.file.path}").read
       @result = CSV.parse(data)
       @datos = @result.shift
-      @token = render json: [{name: 'Datos 1', data: @result}]
+      @token = render json: [{name: 'Precio Venta', data: @result.reverse}]
     end
 
     # GET /charts/1

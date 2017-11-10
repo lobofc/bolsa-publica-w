@@ -19,6 +19,7 @@ Rails.application.routes.draw do
    get '/aplicacion', to: 'app/front#aplicacion', as: :app_aplicacion
    get '/calculadora', to: 'app/front#calculadora', as: :app_calculadora
    get '/admin/chart/un_chart/:id', to: 'admin/charts#un_chart', as: :un_chart
+   get '/estadisticas/chart_front/:id', to: 'app/front#chart_front', as: :chart_front
   root to: 'app/front#index'
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise

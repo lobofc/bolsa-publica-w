@@ -4,6 +4,12 @@ menu:
     url_path: /admin/dashboard
     icon: dashboard
     current: ['keppler_ga_dashboard/dashboard']
+  user:
+    name: users
+    url_path: /admin/users
+    icon: account_circle
+    current: ["admin/users"]
+    model: User
   seo:
     name: SEO
     current: ['admin/meta_tags', 'admin/google_adwords']
@@ -18,12 +24,6 @@ menu:
           name: Google Adwords
           url_path: /admin/google_adwords
           current: ['admin/google_adwords']
-  google_analytics_track:
-    name: google analytics tracks
-    url_path: /admin/google_analytics_tracks
-    icon: insert_chart
-    current: ['admin/google_analytics_tracks']
-    model: GoogleAnalyticsTrack
   keppler_messages:
     name: keppler messages
     current: ['keppler_contact_us/messages', 'keppler_contact_us/message_settings']
@@ -38,6 +38,8 @@ menu:
           name: Message Settings
           url_path: /admin/message_settings
           current: ['keppler_contact_us/message_settings']
+
+
   indicator:
     name: Indicadores
     url_path: /admin/indicators
@@ -56,12 +58,7 @@ menu:
     icon: timeline
     current: ['admin/charts']
     model: Chart
-  user:
-    name: users
-    url_path: /admin/users
-    icon: account_circle
-    current: ["admin/users"]
-    model: User
+
   # customize:
   #   name: keppler design
   #   icon: color_lens
@@ -76,6 +73,12 @@ menu:
   #         name: admin appearance
   #         url_path: /admin/settings/appearance
   #         current: ['appearance']
+  google_analytics_track:
+    name: google analytics tracks
+    url_path: /admin/google_analytics_tracks
+    icon: insert_chart
+    current: ['admin/google_analytics_tracks']
+    model: GoogleAnalyticsTrack
   setting:
     name: setting
     current: ['admin/settings']
