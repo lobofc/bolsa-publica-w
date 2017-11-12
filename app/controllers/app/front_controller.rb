@@ -11,15 +11,8 @@ module App
 
     def estadisticas
       @charts = Chart.all
+      @counter = Chart.count
       @indicators = Indicator.all
-    end
-
-    def chart_front
-      @graph = Chart.find(params[:id])
-      data = File.open("#{@graph.file.path}").read
-      @result = CSV.parse(data)
-      @datos = @result.shift
-      render json: [{name: 'Precio Venta', data: @result.reverse}]
     end
 
     def mercadosecundario

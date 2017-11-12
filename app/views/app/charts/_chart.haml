@@ -1,0 +1,145 @@
+.chart{id: "chartdiv-#{local[:index]+1}", :style => "width: 640px; height: 400px;"}
+%h1= "Chart #{local[:index]+1}"
+- @contador = local[:index]+1
+
+:javascript
+  var contador = "#{@contador}"
+  var rowSupremo = []
+  var chart;
+  var chartData = [];
+  var chartCursor;
+
+  AmCharts.ready(function() {
+  // SERIAL CHART
+  chart = new AmCharts.AmSerialChart();
+  chart.pathToImages = "/documents/";
+  chart.dataProvider = chartData;
+  chart.categoryField = "date";
+  chart.dataDateFormat = "DD/MM/YYYY";
+  // listen for "dataUpdated" event (fired when chart is rendered) and call zoomChart method when it happens
+  chart.addListener("dataUpdated", zoomChart);
+  // AXES
+  // category
+  var categoryAxis = chart.categoryAxis;
+  categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+  categoryAxis.minPeriod = "DD"; // our data is daily, so we set minPeriod to DD
+  categoryAxis.dashLength = 1;
+  categoryAxis.gridAlpha = 0.15;
+  categoryAxis.minorGridEnabled = true;
+  categoryAxis.axisColor = "#DADADA";
+
+  // value
+  var valueAxis = new AmCharts.ValueAxis();
+  valueAxis.axisAlpha = 0.2;
+  valueAxis.dashLength = 1;
+  chart.addValueAxis(valueAxis);
+
+  // GRAPH
+  var graph = new AmCharts.AmGraph();
+  graph.title = "Blue Line";
+  graph.valueField = "algo";
+  graph.bullet = "round";
+  graph.bulletBorderColor = "#FFFFFF";
+  graph.bulletBorderThickness = 2;
+  graph.bulletBorderAlpha = 1;
+  graph.lineThickness = 2;
+  graph.lineColor = "#b5030d";
+  graph.negativeLineColor = "#0352b5";
+  graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>value: [[value]]</span></b>";
+  graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
+  // console.log(graph);
+  chart.addGraph(graph);
+
+  var graph = new AmCharts.AmGraph();
+  graph.title = "red line";
+  graph.valueField = "visits";
+  graph.bullet = "round";
+  graph.bulletBorderColor = "#FFFFFF";
+  graph.bulletBorderThickness = 2;
+  graph.bulletBorderAlpha = 1;
+  graph.lineThickness = 2;
+  graph.lineColor = "rgb(32, 172, 212)";
+  graph.negativeLineColor = "#0352b5";
+  graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>value: [[value]]</span></b>";
+  graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
+  // console.log(graph);
+  chart.addGraph(graph);
+
+  // CURSOR
+  chartCursor = new AmCharts.ChartCursor();
+  chartCursor.cursorPosition = "mouse";
+  chart.addChartCursor(chartCursor);
+
+  // SCROLLBAR
+  var chartScrollbar = new AmCharts.ChartScrollbar();
+  chartScrollbar.graph = graph;
+  chartScrollbar.scrollbarHeight = 40;
+  chartScrollbar.color = "#FFFFFF";
+  chartScrollbar.autoGridCount = true;
+  chart.addChartScrollbar(chartScrollbar);
+
+  // WRITE
+  chart.write(`chardiv-${contador}`);
+
+  parseCSV("#{local[:chart].file}");
+  });
+
+
+  function parseCSV(data) {
+
+  Papa.parse("#{local[:chart].file}", {
+  download: true,
+  step: function(row, parser) {
+  var snowden = row.data;
+  llenarArray(snowden);
+  },
+  complete: function(results, file) {
+  console.log("Parsing complete:", results, file);
+  rowSupremo.reverse().shift();
+  // console.log(rowSupremo);
+  llenarChart(rowSupremo);
+  }
+  });
+
+  function llenarArray(data){
+  rowSupremo.push(data);
+  }
+
+  function llenarChart(data){
+  for (var i = 0; i < data.length; i++) {
+  rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
+  rowSupremo[i][0][2] = rowSupremo[i][0][2].replace(/,/g, '.');
+  var date = rowSupremo[i][0][0];
+  var value = rowSupremo[i][0][1];
+  var value2 = rowSupremo[i][0][2];
+  var dataObject = {
+  date: date,
+  visits: value,
+  algo: value2
+  };
+  // add object to chartData array
+  chartData.push(dataObject);
+  // console.log(dataObject);
+  }
+  chart.validateData();
+  }
+
+  }
+
+  // this method is called when chart is first inited as we listen for "dataUpdated" event
+  function zoomChart() {
+  // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+  chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
+  }
+
+  // changes cursor mode from pan to select
+  function setPanSelect() {
+  if (document.getElementById("rb1").checked) {
+  chartCursor.pan = false;
+  chartCursor.zoomable = true;
+
+  } else {
+  chartCursor.pan = true;
+  }
+  chart.validateNow();
+  }

@@ -22,31 +22,6 @@ module Admin
       end
     end
 
-    def un_chart
-      # @chart1 = Banner.find(1)
-      # @chart2 = Banner.find(2)
-      # data1 = File.open("#{@chart1.banner.path}").read
-      # data2 = File.open("#{@chart2.banner.path}").read
-      # @result1 = CSV.parse(data1)
-      # @result2 = CSV.parse(data2)
-      # render json: [{name: 'Count', data: @result1},{name: 'Count', data: @result2}]
-
-      @graph = Chart.find(params[:id])
-
-      # options = { col_sep: '|', converters: :numeric, headers: true }
-      # CSV.foreach(@graph.file.path, options) do |row|
-      #   filename = "#{row['date,market1,market2'].downcase}.json"
-      #   @data << JSON.pretty_generate(row.to_hash)
-      # end
-
-
-
-      data = File.open("#{@graph.file.path}").read
-      @result = CSV.parse(data)
-      @datos = @result.shift
-      @token = render json: [{name: 'Precio Venta', data: @result.reverse}]
-    end
-
     # GET /charts/1
     def show
     end
