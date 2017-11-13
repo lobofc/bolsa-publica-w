@@ -419,67 +419,67 @@ body {
 .listin li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/redo2Y.png');
+  list-style-image: url('../img/redo2Y.png');
 }
 
 .listin2 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/checkmarkY.png');
+  list-style-image: url('../img/checkmarkY.png');
 }
 
 .listin3 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/point-rightY.png');
+  list-style-image: url('../img/point-rightY.png');
 }
 
 .listin4 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/file-text2Y.png');
+  list-style-image: url('../img/file-text2Y.png');
 }
 
 .listin5 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/clipboardY.png');
+  list-style-image: url('../img/clipboardY.png');
 }
 
 .listinBlue li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/redo2B.png');
+  list-style-image: url('../img/redo2B.png');
 }
 
 .listinBlue2 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/checkmarkB.png');
+  list-style-image: url('../img/checkmarkB.png');
 }
 
 .listinBlue3 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/point-rightB.png');
+  list-style-image: url('../img/point-rightB.png');
 }
 
 .listinBlue4 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/file-text2B.png');
+  list-style-image: url('../img/file-text2B.png');
 }
 
 .listinBlue5 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/pasteB.png');
+  list-style-image: url('../img/pasteB.png');
 }
 
 .listinBlue6 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../images/clipboardB.png');
+  list-style-image: url('../img/clipboardB.png');
 }
 
 .datos li {
@@ -526,7 +526,7 @@ body {
   width: 100%;
   margin-top: 3%;
   margin-bottom: 1%;
-  background-image: url(../images/separador.png);
+  background-image: url(../img/separador.png);
   background-repeat: no-repeat;
   background-size: auto;
  }
@@ -535,7 +535,7 @@ body {
   width: 100%;
   margin-top: 5%;
   margin-bottom: 1%;
-  background-image: url(../images/separador2.png);
+  background-image: url(../img/separador2.png);
   background-repeat: no-repeat;
   background-size: auto;
  }
@@ -558,11 +558,11 @@ body {
  }
 
  .checkLista li {
-    list-style-image: url('../images/checkmark.png');
+    list-style-image: url('../img/checkmark.png');
  }
 
  .fondoTable {
-    background: url(../images/fondo_tabla1.png) no-repeat fixed center;
+    background: url(../img/fondo_tabla1.png) no-repeat fixed center;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;

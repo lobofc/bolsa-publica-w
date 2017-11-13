@@ -60,9 +60,11 @@
           =indicator.value
     %h6= @counter
 
-    -@counter.times do |x|
+    - @path = []
+    -@charts.each_with_index do |chart, x|
       %h6= "Chart #{x+1}"
       .chart{id: "chartdiv-#{x+1}", :style => "width: 640px; height: 400px;"}
+      -@path.push(chart.file)
 
 
 
@@ -116,11 +118,12 @@
     %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
 :javascript
   var ghost;
+  var path = "#{@path}"
   function makeChart(route, counter, ghost){
     var chartpath = route
     var charts = counter
     var counter = "#{@counter}"
-    console.log(chartpath);
+    // console.log(chartpath);
     var rowSupremo = [];
     var chart;
     var chartData = [];
@@ -215,7 +218,9 @@
           console.log("Parsing complete:", results, file);
           rowSupremo.reverse().shift();
           console.log(rowSupremo);
-          llenarChart(rowSupremo);
+          if (rowSupremo[0][0].length==3){llenarChart(rowSupremo);}
+          else if (rowSupremo[0][0].length==2){llenarChartUno(rowSupremo);}
+          else{console.log("CHART INVALIDO");}
         }
       });
 
@@ -235,6 +240,22 @@
             date: date,
             compra: value,
             venta: value2
+          };
+          // add object to chartData array
+          chartData.push(dataObject);
+          // console.log(dataObject);
+        }
+        chart.validateData();
+      }
+      function llenarChartUno(data){
+        for (var i = 0; i < data.length; i++) {
+          rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
+          var date = rowSupremo[i][0][0];
+          var value = rowSupremo[i][0][1];
+
+          var dataObject = {
+            date: date,
+            compra: value,
           };
           // add object to chartData array
           chartData.push(dataObject);
