@@ -71,7 +71,7 @@
 		// GRAPH
 		var graph = new AmCharts.AmGraph();
 		graph.title = "Blue Line";
-		graph.valueField = "algo";
+		graph.valueField = "venta";
 		graph.bullet = "round";
 		graph.bulletBorderColor = "#FFFFFF";
 		graph.bulletBorderThickness = 2;
@@ -86,7 +86,7 @@
 
 		var graph = new AmCharts.AmGraph();
 		graph.title = "red line";
-		graph.valueField = "visits";
+		graph.valueField = "compra";
 		graph.bullet = "round";
 		graph.bulletBorderColor = "#FFFFFF";
 		graph.bulletBorderThickness = 2;
@@ -148,8 +148,8 @@
 				var value2 = rowSupremo[i][0][2];
 				var dataObject = {
 					date: date,
-					visits: value,
-					algo: value2
+					compra: value,
+					venta: value2
 				};
 				// add object to chartData array
 				chartData.push(dataObject);

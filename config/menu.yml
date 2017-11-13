@@ -53,7 +53,7 @@ menu:
     current: ['admin/banners']
     model: Banner
   chart:
-    name: charts
+    name: Estadisticas
     url_path: /admin/charts
     icon: timeline
     current: ['admin/charts']
