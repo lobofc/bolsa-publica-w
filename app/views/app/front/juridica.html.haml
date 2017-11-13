@@ -16,20 +16,24 @@
       %nav
         .nav-wrapper.white
           %a.brand-logo{:href => "/index"}
-            %img{:src => "assets/img/Logo_encabezado.png"}/
+            %img{:src => "assets/img/logo.png"}/
           %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
-            %i.material-icons menu
-          %ul.right.hide-on-med-and-down
+            %i.material-icons.grey-text.text-darken-4 menu
+          %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey-text.text-darken-4{:href => "/index"} Inicio
+              %a.red.white-text{:href => "/contacto"} Contacto
+          %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey-text.text-darken-4{:href => "/quienessomos"} Quienes Somos
+              %a.red.darken-3.white-text{:href => "/estadisticas"} Estadísticas
+          %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey-text.text-darken-4{:href => "/tarifas"} Tarifas
+              %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
+          %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey-text.text-darken-4{:href => "/estadisticas"} Estadísticas
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
+          %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey-text.text-darken-4{:href => "/contacto"} Contacto
+              %a.grey.darken-4.white-text{:href => "/index"} Inicio
           %ul#mobile-demo.side-nav
             %li
               %a{:href => "/index"} Inicio
@@ -38,9 +42,9 @@
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
-              %a{:href => "/contacto"} Contacto
-            %li
               %a{:href => "/estadisticas"} Estadísticas
+            %li
+              %a{:href => "/contacto"} Contacto
     .container.anidada
       .row
         .col.s12
