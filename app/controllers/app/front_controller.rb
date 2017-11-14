@@ -10,9 +10,28 @@ module App
     end
 
     def estadisticas
+      @pathCSV = []
       @charts = Chart.all
       @counter = Chart.count
       @indicators = Indicator.all
+
+      @charts.each_with_index do |chart, index|
+        path = chart.file.path.split("/")
+
+        path.each_with_index do |path, index|
+          @position = index if path == "uploads"
+        end
+
+        @position.times do |x|
+          path.shift
+        end
+
+        path = path.join("/")
+
+        @pathCSV << path
+
+      end
+
     end
 
     def mercadosecundario
