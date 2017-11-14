@@ -65,7 +65,7 @@
         %input#cs_pause1_1.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
         %input#cs_pause1_2.cs_anchor.pause{:name => "cs_anchor1", :type => "radio"}/
         %ul
-          %li.cs_skeleton{style:"height:500px;"}
+          %li.cs_skeleton{style:"height:auto;"}
             = image_tag @banners.last.banner, :style => "width: 100%;"
           - @banners.each_with_index do |banner, index|
             %li.img.slide{class: "num#{index}"}
