@@ -4,6 +4,8 @@ class Banner < ActiveRecord::Base
   include CloneRecord
   mount_uploader :banner, AttachmentUploader
 
+  validates_presence_of :banner
+
   # Fields for the search form in the navbar
   def self.search_field
     :banner_cont
