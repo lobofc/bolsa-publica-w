@@ -42,6 +42,9 @@
 	var chart;
 	var chartData = [];
 	var chartCursor;
+	var primer_valor = "#{@chart.value_one}"
+	var segundo_valor = "#{@chart.value_two}"
+	console.log(primer_valor)
 
 	AmCharts.ready(function() {
 		// SERIAL CHART
@@ -79,7 +82,7 @@
 		graph.lineThickness = 2;
 		graph.lineColor = "#b5030d";
 		graph.negativeLineColor = "#0352b5";
-		graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>value: [[value]]</span></b>";
+		graph.balloonText = `[[category]]<br><b><span style='font-size:14px;'>${segundo_valor}: [[value]]</span></b`;
 		graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
 		// console.log(graph);
 		chart.addGraph(graph);
@@ -94,7 +97,7 @@
 		graph.lineThickness = 2;
 		graph.lineColor = "rgb(32, 172, 212)";
 		graph.negativeLineColor = "#0352b5";
-		graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>value: [[value]]</span></b>";
+		graph.balloonText = `[[category]]<br><b><span style='font-size:14px;'>${primer_valor}: [[value]]</span></b`;
 		graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
 		// console.log(graph);
 		chart.addGraph(graph);
@@ -164,6 +167,7 @@
 
 		function llenarChartUno(data){
 			for (var i = 0; i < data.length; i++) {
+
 				rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
 
 				for (let a=0; a<= rowSupremo[i][0][1].length; a++){

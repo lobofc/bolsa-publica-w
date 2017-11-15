@@ -55,7 +55,7 @@ menu:
   chart:
     name: Estadisticas
     url_path: /admin/charts
-    icon: timeline
+    icon: equalizer
     current: ['admin/charts']
     model: Chart
 

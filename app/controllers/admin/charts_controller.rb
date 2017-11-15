@@ -88,7 +88,7 @@ module Admin
 
     # Only allow a trusted parameter "white list" through.
     def chart_params
-      params.require(:chart).permit(:name, :file)
+      params.require(:chart).permit(:name, :file, :value_one, :value_two)
     end
 
     def show_history

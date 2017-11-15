@@ -117,8 +117,14 @@
     %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
 :javascript
   var ghost;
-  var path = #{raw @pathCSV}
-  function makeChart(route, counter, ghost){
+  var path = #{raw @pathCSV};
+  var id = #{raw @arrayId};
+  console.log(id);
+  var primer_valor;
+  var segundo_valor;
+
+
+  function makeChart(route, counter, ghost, primer_valor, segundo_valor){
     var chartpath = route
     var charts = counter
     var counter = "#{@counter}"
@@ -164,9 +170,9 @@
       graph.lineThickness = 2;
       graph.lineColor = "#b5030d";
       graph.negativeLineColor = "#0352b5";
-      graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>Precio Compra: [[value]]</span></b>";
+      graph.balloonText = `[[category]]<br><b><span style='font-size:14px;'>${segundo_valor}: [[value]]</span></b`;
       graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
-      console.log(graph);
+      // console.log(graph);
       chart.addGraph(graph);
 
       var graph = new AmCharts.AmGraph();
@@ -180,7 +186,7 @@
       graph.lineThickness = 2;
       graph.lineColor = "rgb(32, 172, 212)";
       graph.negativeLineColor = "#0352b5";
-      graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>Precio Venta: [[value]]</span></b>";
+      graph.balloonText = `[[category]]<br><b><span style='font-size:14px;'>${primer_valor}: [[value]]</span></b`;
       graph.hideBulletsCount = 50; // this makes the chart to hide bullets when there are more than 50 series in selection
       // console.log(graph);
       chart.addGraph(graph);
@@ -216,12 +222,12 @@
           llenarArray(snowden);
         },
         complete: function(results, file) {
-          console.log("Parsing complete:", results, file);
           rowSupremo.reverse().shift();
-          console.log(rowSupremo);
           if (rowSupremo[0][0].length==3){llenarChart(rowSupremo);}
           else if (rowSupremo[0][0].length==2){llenarChartUno(rowSupremo);}
           else{console.log("CHART INVALIDO");}
+          console.log(rowSupremo);
+          console.log("Parsing complete:", results, file);
         }
       });
 
@@ -231,8 +237,21 @@
 
       function llenarChart(data){
         for (var i = 0; i < data.length; i++) {
+
+          for (let a=0; a<= rowSupremo[i][0][1].length; a++){
+  					if (rowSupremo[i][0][1][a] == "."){
+  						rowSupremo[i][0][1] = rowSupremo[i][0][1].split(".").join("");
+  					}
+  				}
+          for (let a=0; a<= rowSupremo[i][0][1].length; a++){
+  					if (rowSupremo[i][0][2][a] == "."){
+  						rowSupremo[i][0][2] = rowSupremo[i][0][2].split(".").join("");
+  					}
+  				}
+
           rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
           rowSupremo[i][0][2] = rowSupremo[i][0][2].replace(/,/g, '.');
+
           var date = rowSupremo[i][0][0];
           var value = rowSupremo[i][0][1];
           var value2 = rowSupremo[i][0][2];
@@ -250,10 +269,17 @@
       }
       function llenarChartUno(data){
         for (var i = 0; i < data.length; i++) {
+
+          for (let a=0; a<= rowSupremo[i][0][1].length; a++){
+  					if (rowSupremo[i][0][1][a] == "."){
+  						rowSupremo[i][0][1] = rowSupremo[i][0][1].split(".").join("");
+  					}
+  				}
+
           rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
+
           var date = rowSupremo[i][0][0];
           var value = rowSupremo[i][0][1];
-
           var dataObject = {
             date: date,
             compra: value,
@@ -288,7 +314,9 @@
 
   for (let i = 1; i<= #{@counter}; i++){
     console.log(path[i-1]);
-    makeChart(path[i-1], "#{@counter}", ghost = i);
+    primer_valor = id.shift();
+    segundo_valor = id.shift();
+    makeChart(path[i-1], "#{@counter}", ghost = i, primer_valor, segundo_valor);
   }
 
 :scss

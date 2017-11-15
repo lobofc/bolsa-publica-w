@@ -10,6 +10,8 @@
 						.row
 							= f.input :name, label: "Nombre"
 							= f.input :file, :as => :file_material, label: false, wrapper_html: { class: "file-field" }
+							= f.input :value_one, label: "Nombre del primer valor (Ej: Precio Venta)"
+							= f.input :value_two, label: "Nombre del segundo valor (Ej: Precio Compra)"
 
 							.form-actions.right
 								= f.button :submit, t("keppler.actions.save"), name: '_save'
