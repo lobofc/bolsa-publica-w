@@ -165,6 +165,13 @@
 		function llenarChartUno(data){
 			for (var i = 0; i < data.length; i++) {
 				rowSupremo[i][0][1] = rowSupremo[i][0][1].replace(/,/g, '.');
+
+				for (let a=0; a<= rowSupremo[i][0][1].length; a++){
+					if (rowSupremo[i][0][1][a] == "."){
+						rowSupremo[i][0][1] = rowSupremo[i][0][1].split(".").join("");
+					}
+				}
+
 				var date = rowSupremo[i][0][0];
 				var value = rowSupremo[i][0][1];
 				var dataObject = {
