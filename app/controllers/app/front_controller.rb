@@ -47,6 +47,11 @@ module App
     end
 
     def aplicacion
+      @calculators = Calculator.all
+      @values = []
+      @calculators.each_with_index do |calculator, index|
+        @values << calculator.value
+      end
     end
 
     def calculadora

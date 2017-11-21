@@ -1,6 +1,7 @@
 en:
   keppler:
     sidebar-menu:
+      calculators: Calculators
       charts: Charts
       banners: Banners
       indicators: Indicators
@@ -26,6 +27,7 @@ en:
         categories: Categories
     models:
       singularize:
+        calculator: calculator
         chart: chart
         banner: banner
         indicator: indicator
@@ -37,6 +39,7 @@ en:
         configuration: configuration
         user: user
       pluralize:
+        calculators: calculators
         charts: charts
         banners: banners
         indicators: indicators
@@ -48,6 +51,7 @@ en:
         configurations: configurations
         user: users
     modules:
+      admin/calculators: Calculators
       admin/charts: Charts
       admin/banners: Banners
       admin/indicators: Indicators

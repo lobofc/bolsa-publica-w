@@ -222,6 +222,7 @@
     %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
     %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
     :javascript
+      var values = #{raw @values}
       function comprobarFecha()
         {
            var fechaActual = new Date();
@@ -394,31 +395,31 @@
                   document.getElementById('codigo').innerHTML= "Código Sicet: DPBS09345-0032";
                   document.getElementById('emision').innerHTML= "Fecha de Emisión: 08/01/2013";
                   document.getElementById('vencimiento').innerHTML= "Fecha de Vencimiento: 19/01/2023";
-                  document.getElementById('cupon').innerHTML= "Cupón: 14.80%";
+                  document.getElementById('cupon').innerHTML= `Cupón: ${values[0]}%`;
               } else  if (valor === 'producto7') {
                   aplicacion.campoTexto.onclick = aplicacion.funcion7;
                   document.getElementById('codigo').innerHTML= "Código Sicet: DPBS02909-0044";
                   document.getElementById('emision').innerHTML= "Fecha de Emisión: 13/06/2017";
                   document.getElementById('vencimiento').innerHTML= "Fecha de Vencimiento: 15/03/2035";
-                  document.getElementById('cupon').innerHTML= "Cupón: 13.67%";
+                  document.getElementById('cupon').innerHTML= `Cupón: ${values[1]}%`;
               } else  if (valor === 'producto8') {
                   aplicacion.campoTexto.onclick = aplicacion.funcion8;
                   document.getElementById('codigo').innerHTML= "Código Sicet: DPBS01632-0039";
                   document.getElementById('emision').innerHTML= "Fecha de Emisión: 24/02/2015";
                   document.getElementById('vencimiento').innerHTML= "Fecha de Vencimiento: 20/04/2028";
-                  document.getElementById('cupon').innerHTML= "Cupón: 15.25%";
+                  document.getElementById('cupon').innerHTML= `Cupón: ${values[2]}%`;
               } else  if (valor === 'producto9') {
                   aplicacion.campoTexto.onclick = aplicacion.funcion9;
                   document.getElementById('codigo').innerHTML= "Código Sicet: DPBS02207-0052";
                   document.getElementById('emision').innerHTML= "Fecha de Emisión: 28/01/2016";
                   document.getElementById('vencimiento').innerHTML= "Fecha de Vencimiento: 17/06/2032";
-                  document.getElementById('cupon').innerHTML= "Cupón: 14.17%";
+                  document.getElementById('cupon').innerHTML= `Cupón: ${values[3]}%`;
               } else  if (valor === 'producto10') {
                   aplicacion.campoTexto.onclick = aplicacion.funcion10;
                   document.getElementById('codigo').innerHTML= "Código Sicet: DPBS02209-0014";
                   document.getElementById('emision').innerHTML= "Fecha de Emisión: 28/01/2016";
                   document.getElementById('vencimiento').innerHTML= "Fecha de Vencimiento: 21/07/2033";
-                  document.getElementById('cupon').innerHTML= "Cupón: 14.26%";
+                  document.getElementById('cupon').innerHTML= `Cupón: ${values[4]}%`;
               }
           },
 
@@ -800,7 +801,7 @@
 
            var diasCaidos = Math.floor((fechaValor - fechaEmision) / (1000*60*60*24));
 
-           var cupon = 14.80;
+           var cupon = values[0];
 
            var valorNominal = parseFloat(document.getElementById("nominal").value);
 
@@ -869,7 +870,7 @@
 
            var diasCaidos = Math.floor((fechaValor - fechaEmision) / (1000*60*60*24));
 
-           var cupon = 13.67;
+           var cupon = values[1];
 
            var valorNominal = parseFloat(document.getElementById("nominal").value);
 
@@ -938,7 +939,7 @@
 
            var diasCaidos = Math.floor((fechaValor - fechaEmision) / (1000*60*60*24));
 
-           var cupon = 15.25;
+           var cupon = values[2];
 
            var valorNominal = parseFloat(document.getElementById("nominal").value);
 
@@ -1007,7 +1008,7 @@
 
            var diasCaidos = Math.floor((fechaValor - fechaEmision) / (1000*60*60*24));
 
-           var cupon = 14.17;
+           var cupon = values[3];
 
            var valorNominal = parseFloat(document.getElementById("nominal").value);
 
@@ -1076,7 +1077,7 @@
 
            var diasCaidos = Math.floor((fechaValor - fechaEmision) / (1000*60*60*24));
 
-           var cupon = 14.26;
+           var cupon = values[4];
 
            var valorNominal = parseFloat(document.getElementById("nominal").value);
 
