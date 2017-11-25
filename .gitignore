@@ -29,6 +29,7 @@ db/*.sqlite3
 /app/assets/javascripts/guard_javascript/*
 /app/assets/stylesheets/frontend/native_stylesheets/guard_stylesheets/*
 /config/application.yml
+/config/database.yml
 /config/secrets.yml
 /config/secrets.yml.example
 /coverage.data
