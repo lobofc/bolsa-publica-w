@@ -8,9 +8,9 @@ class Ability
     if user.has_role? :admin
 
       # - Calculator authorize -
-      can [:update,
-           :new, :create, :install_default,
-           :index, :destroy_multiple, :show], Calculator
+      # can [:update,
+      #      :new, :create, :install_default,
+      #      :index, :destroy_multiple, :show], Calculator
       can :manage, KepplerContactUs::Message
       can :manage, KepplerContactUs::MessageSetting
       # - Chart authorize -
@@ -52,7 +52,7 @@ class Ability
       # - Chart authorize -
       can :manage, Chart
 
-      can [:delete, :update, :index, :destroy, :destroy_multiple], Calculator
+      # can [:delete, :update, :index, :destroy, :destroy_multiple], Calculator
 
       # - Banner authorize -
       can :manage, Banner
