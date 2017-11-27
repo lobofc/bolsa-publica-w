@@ -10,42 +10,37 @@
 # # user = CreateAdminService.new.call
 # # puts 'CREATED ADMIN USER: ' << user.email
 #
-# [:admin, :client].each do |name|
-#   Role.create name: name
-#   puts "#{name} has been created"
-# end
-#
-# User.create(
-#   name: 'admin', email: 'admin@keppler.com', password: '12345678',
-#   password_confirmation: '12345678', role_ids: '1'
-# )
-#
-# puts 'admin@keppler.com has been created'
-#
-# Customize.create(file: "", installed: true)
-# puts 'Keppler Template has been created'
-# # Create setting deafult
-# setting = Setting.new(
-#   name: 'Keppler Admin', description: 'Welcome to Keppler Admin',
-#   smtp_setting_attributes: {
-#     address: 'test', port: '25', domain_name: 'keppler.com',
-#     email: 'info@keppler.com', password: '12345678'
-#   },
-#   google_analytics_setting_attributes: {
-#     ga_account_id: '60688852',
-#     ga_tracking_id: 'UA-60688852-1',
-#     ga_status: true
-#   }
-# )
-# setting.social_account = SocialAccount.new
-# setting.appearance = Appearance.new(theme_name: 'keppler')
-# setting.save
-# puts 'Setting default has been created'
-#
-# KepplerContactUs::MessageSetting.create(mailer_to:"bpvboac@gmail.com",mailer_from:"bpvboac@gmail.com")
-# puts 'Mailer_to & Mailer_from KepplerContactUs has been created'
+[:admin, :client].each do |name|
+   Role.create name: name
+   puts "#{name} has been created"
+ end
 
-["VEB012023", "VEB032035", "VEB042028", "VEB062023", "VEB072033"].each_with_index do |name,index|
-  Calculator.create name: name, value: index
-  puts "#{name} has been created"
-end
+ User.create(
+   name: 'admin', email: 'admin@keppler.com', password: '12345678',
+   password_confirmation: '12345678', role_ids: '1'
+ )
+
+ puts 'admin@keppler.com has been created'
+
+ Customize.create(file: "", installed: true)
+ puts 'Keppler Template has been created'
+ # Create setting deafult
+ setting = Setting.new(
+   name: 'Keppler Admin', description: 'Welcome to Keppler Admin',
+   smtp_setting_attributes: {
+     address: 'test', port: '25', domain_name: 'keppler.com',
+     email: 'info@keppler.com', password: '12345678'
+   },
+   google_analytics_setting_attributes: {
+     ga_account_id: '60688852',
+     ga_tracking_id: 'UA-60688852-1',
+     ga_status: true
+   }
+ )
+ setting.social_account = SocialAccount.new
+ setting.appearance = Appearance.new(theme_name: 'keppler')
+ setting.save
+ puts 'Setting default has been created'
+
+ KepplerContactUs::MessageSetting.create(mailer_to:"bpvboac@gmail.com",mailer_from:"bpvboac@gmail.com")
+ puts 'Mailer_to & Mailer_from KepplerContactUMailer_from KepplerContactUs has been created'
