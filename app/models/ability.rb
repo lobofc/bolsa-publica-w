@@ -4,15 +4,16 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user (not logged in)
-
+    can :manage, KepplerContactUs::Message
+    can :manage, KepplerContactUs::MessageSetting
+    
     if user.has_role? :admin
 
       # - Calculator authorize -
       # can [:update,
       #      :new, :create, :install_default,
       #      :index, :destroy_multiple, :show], Calculator
-      can :manage, KepplerContactUs::Message
-      can :manage, KepplerContactUs::MessageSetting
+
       # - Chart authorize -
       can :manage, Chart
 
