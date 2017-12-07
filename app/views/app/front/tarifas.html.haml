@@ -51,7 +51,7 @@
         .col.s12.cambio.justificar
           %h5 Tarifas de inscripción y colocación de títulos valores
           %p.flow-text La Bolsa Pública de Valores Bicentenaria (BPVB), informa las nuevas tarifas de inscripción y colocación de Títulos Valores, prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
-        .col.s12
+        .tablex.col.s12
           %table.striped.responsive-table.tablaMargen
             %thead
               %tr.red.darken-4
@@ -70,6 +70,27 @@
                 %td Colocación de Títulos Valores
                 %td Las tarifas se aplican sobre los títulos valores totalmente colocados
                 %td 1,00%
+          .tablex2.col.s12
+            %ul.collection
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Descripción de la Comisión
+              %li.collection-item.center.align Inscripción de Títulos Valores
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Detalles
+              %li.collection-item.center.align Las tarifas se aplican sobre el monto de la emisión aprobada por la Superintendencia Nacional de Valores (SNV)
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Tarifa
+              %li.collection-item.center.align 0,05%
+            %ul.collection
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Descripción de la Comisión
+              %li.collection-item.center.align Colocación de Títulos Valores
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Detalles
+              %li.collection-item.center.align Las tarifas se aplican sobre los títulos valores totalmente colocados
+              %li.collection-item.red.darken-4.white-text.center.align
+                %b Tarifa
+              %li.collection-item.center.align 1,00%        
           .col.s12.cambio.justificar
             %h5 Tarifas por servicio de mantenimiento de custodia
             %p.flow-text
@@ -77,6 +98,7 @@
               informa las nuevas tarifas a partir del 01 de Junio de 2017  por el
               = succeed "," do
                 %b Servicio de Custodia de Títulos Valores
+                prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
             %p.flow-text
               %b Beneficios
           %ol.cambio.checkLista
@@ -100,15 +122,144 @@
           %ol.cambio.checkLista
             %li
               %p Solo se aceptan  transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
+      .tablex.col.s12
+        %table.striped.tablaMargen
+          %thead
+            %tr
+              %th.alto.col.s3.red.darken-4
+                %h6.white-text
+                  %b
+                    Concepto
+                    %b
+              %th.alto.col.s3.red.darken-4
+                %h6.white-text
+                  %b Tipo de Inversor
+              %th.alto.col.s3.red.darken-4
+                %h6.white-text
+                  %b Valores Nominales Bs.
+              %th.alto.col.s3.red.darken-4
+                %h6.white-text
+                  %b Tarifas
+          %tbody
+            %tr.izquierda
+              %td.cuadro.col.s3.justificar
+                %p
+                  %b Mantenimiento de custodia:
+                  comisión sobre la posición total que mantenga el inversor en la BPVB al cierre de mes.
+                  
+                  Los Valores Nominales de títulos en moneda extranjera, serán convertidos en Bolívares a la tasa oficial establecida.
+                  %br/
+                  %br/
+                  %b Nota:
+                  Para el cálculo de las comisiones de mantenimiento de custodia se considera la posición consolidada del inversor al  cierre de mes, la tarifa  es anualizada y se factura mensual dentro de los cinco (5) primeros días hábiles del mes siguiente.    Cálculo (VN * Tarifa / 360 * 30)
+              %td.col.s3
+                %table
+                  %tr
+                    %td.tdClase.center.align
+                      %p Persona Natural
+                  %tr
+                    %td.tdClase.center.align
+                      %p Persona Jurídica
+              %td.col.s3
+                %table
+                  %tr
+                    %td.center.align
+                      %p Menos de 50.000
+                  %tr
+                    %td.tdClase2.center.align
+                      %p A partir de 50.001
+                  %tr
+                    %td.center.align
+                      %p Menos de 50.000
+                  %tr
+                    %td.center.align
+                      %p A partir de 50.001
+              %td.col.s3
+                %table
+                  %tr
+                    %td.center.align
+                      %p Exonerado
+                  %tr
+                    %td.tdClase3.center.align
+                      %p 0,50% Mensual s/VN (Mínimo 2  UT)
+                  %tr
+                    %td.center.align
+                      %p Exonerado
+                  %tr
+                    %td.center.align
+                      %p 0,50% Mensual s/VN (Mínimo 2  UT)
+            %tr.izquierda
+              %td.cuadro.col.s3.justificar
+                %p
+                  %b Traspaso de Títulos Valores:
+                  transferencia de Títulos Valores de la BPVB hacia otra institución financiera.
+                  %br/
+                  %br/
+                  %b Nota:
+                  El inversor debe efectuar el pago por cada título valor a traspasar antes de realizar la operación.
+              %td.col.s3
+                %table
+                  %tr
+                    %td.tdClase4.tdClase5.center.align
+                      %p Persona Natural
+                  %tr
+                    %td.tdClase4.center.align
+                      %p Persona Jurídica
+              %td.col.s6
+                %table
+                  %tr
+                    %td.center.align.red.darken-4
+                      %p.white-text
+                        %b Tarifas
+                  %tr
+                    %td.center.align
+                      %p 0,01% s/VN (Mínimo 2 UT).
+        .tablex2.col.s12
+          %ul.collection
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Concepto
+            %li.collection-item.justificar
+              %b Mantenimiento de custodia:
+              comisión sobre la posición total que mantenga el inversor en la BPVB al cierre de mes.
+              Los Valores Nominales de títulos en moneda extranjera, serán convertidos en Bolívares a la tasa oficial establecida.
+              %br/
+              %br/
+              %b Nota:
+              Para el cálculo de las comisiones de mantenimiento de custodia se considera la posición consolidada del inversor al  cierre de mes, la tarifa  es anualizada y se factura mensual dentro de los cinco (5) primeros días hábiles del mes siguiente.    Cálculo (VN * Tarifa / 360 * 30)
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Tipo de Inversor
+            %li.collection-item.center.align Persona Natural / Persona Jurídica
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Valores Nominales Bs. - Tarifas
+            %li.collection-item.center.align
+              Menos de 50.000 - Exonerado
+              %br/
+              A partir de 50.001 - 0,50% Mensual s/VN (Mínimo 2  UT)
+          %ul.collection
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Concepto
+            %li.collection-item.justificar
+              %b Traspaso de Títulos Valores:
+              transferencia de Títulos Valores de la BPVB hacia otra institución financiera.
+              %br/
+              %br/
+              %b Nota:
+              El inversor debe efectuar el pago por cada título valor a traspasar antes de realizar la operación.
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Tipo de Inversor
+            %li.collection-item.center.align Persona Natural / Persona Jurídica
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Tarifas
+            %li.collection-item.center.align 0,01% s/VN (Mínimo 2 UT)                    
     %footer.page-footer
       .container
         .row
           .col.s12.m6
             %h5.white-text Bolsa Pública de Valores Bicentenaria
             %p.grey-text.text-lighten-4
-              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N
+              Av. Francisco de Miranda, Edificio Torre Europa, Nivel C, Of. S/N
               %br/
-              Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
+              Urb. El Rosal, Municipio Chacao, Estado Miranda. Zona Postal 1060.
               %br/
               %b Horario de atención al público:
               De 8:00 a.m. a 4:30 p.m.
@@ -121,7 +272,7 @@
                 %h6 Redes Sociales:
                 %br/
               %li
-                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/bolsapublicave/", :target => "_blank"}
+                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/Bolsa-Publica-de-Valores-Bicentenaria-470631792952689/?fref=ts", :target => "_blank"}
                 %a.icon-twitter.img-circle{:href => "https://twitter.com/Bolsa_Publica", :target => "_blank"}
                 %a.icon-instagram.img-circle{:href => "https://www.instagram.com/bolsa_publica/", :target => "_blank"}
           .col.l4.offset-l2.s12
@@ -132,7 +283,7 @@
               %li
                 %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
               %li
-                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Legal
+                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Jurídico
               %li
                 %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
               %h5.white-text Enlaces de interés

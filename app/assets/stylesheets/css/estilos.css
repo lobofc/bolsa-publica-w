@@ -6,8 +6,8 @@ body {
  		position: relative;
  	}
  	.seccion {
- 		padding-top: 3%;
- 	}
+ 		padding-top: 3%; 		
+ 	}  
 
 body {
  		position: relative;
@@ -19,14 +19,14 @@ body {
 	height: auto;
 	position:fixed;
 	z-index:700;
-	top:0;
+	top:0;  		
 }
 
 @media screen and (max-width:600px) {
 .brand-logo img {
 	width: 140px;
 	height: 75px;
-	}
+	}	
 }
 .indice {
 	color: #ffa726;
@@ -35,22 +35,28 @@ body {
 
 .marquee {
 	width: 100%;
-	height: auto;
+	height: auto;		
   background-color: #000;
   padding-top: 3px;
   padding-bottom: 40px;
   color: #fff;
 }
 
+@media screen and (max-width:900px) {
+.marquee {
+  display: none;  
+} 
+}
+
 .marquee p {
-	width: 150%;
+	width: 300%;
 	height: auto;
 	animation-name: marquee;
 	animation-duration: 30s;
 	animation-timing-function: linear;
 	animation-delay: 0;
 	animation-iteration-count: infinite;
-	position: absolute;
+	position: absolute;		
 }
 
 .marquee p:hover {
@@ -62,11 +68,12 @@ body {
 	100%{left: -1500px;}
 }
 
-@media screen and (max-width:600px) {
-.marquee {
-	margin-top: 7px;
-	}
+@media screen and (max-width:900px) {
+.csslider1 {
+  margin-top: 5%;  
+} 
 }
+
 
 .image img {
 	width: 100%;
@@ -111,16 +118,16 @@ body {
     }
 
    .cambio p {
-      font-size: 14px;
-    }
+      font-size: 14px;  
+    }           
 }
 
 .imageEspecial img {
   width: 100%;
   height: auto;
-  padding-top: 35px;
+  padding-top: 35px; 
   padding-left: 35px;
-  padding-right: 35px;
+  padding-right: 35px; 
 }
 
 .imagenEspecial2 {
@@ -146,44 +153,44 @@ body {
 
 .redSocial img {
   width: 100%;
-  height: auto;
-}
+  height: auto;  
+} 
 
 .redSocial a {
   width: 100%;
-  height: auto;
-}
+  height: auto;  
+} 
 
 .redSocial iframe {
   width: 100%;
-  height: 370px;
-}
+  height: 370px;    
+} 
 
-.shadow {
+.shadow {     
   margin-bottom: 8%;
 }
 
-.shadow h5 {
+.shadow h5 {      
   padding-top: 2%;
 }
 
-.shadow p {
+.shadow p {      
   padding-bottom: 2%;
 }
 
-.alto {
+.alto {  
   text-align: center;
 }
 
 .medio p {
   text-align: center;
-  font-weight: bold;
+  font-weight: bold; 
   margin-top: 10%;
-  /*margin-bottom: %; */
+  margin-bottom: %; 
 }
 
 .izquierda {
-   border: 1px solid;
+   border: 1px solid; 
 }
 
 .cuadro h6 {
@@ -199,23 +206,23 @@ body {
 }
 
 .cuadro h5 {
-  padding: 5%;
+  padding: 5%;  
 }
 
 .cuadro2 h5 {
-  padding: 9% 5% 9% 5%;
+  padding: 9% 5% 9% 5%;  
 }
 
 .cuadro3 h5 {
-  padding: 17% 5% 17% 5%;
+  padding: 17% 5% 17% 5%;  
 }
 
 .cuadro4 h5 {
-  padding: 17% 5% 17% 5%;
+  padding: 17% 5% 17% 5%;  
 }
 
 .cuadro5 h5 {
-  padding: 13% 5% 13% 5%;
+  padding: 13% 5% 13% 5%;  
 }
 
 .contVenetaja {
@@ -226,7 +233,7 @@ body {
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 1;  
 }
 
 .titulo h3 {
@@ -307,7 +314,7 @@ body {
 
 .requisito {
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 2%;  
 }
 
 .border {
@@ -332,7 +339,7 @@ body {
 
 .borderList {
   border: 2px solid #616161;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px 0px 15px 15px;    
 }
 
 .margenList {
@@ -341,20 +348,20 @@ body {
 
 .marginTitle {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 40px;  
 }
 
 .box {
   margin-top: 5%;
   margin-bottom: 50px;
-  border-radius: 0px 25px 0px 25px;
+  border-radius: 0px 25px 0px 25px;  
 }
 
 .redondIcon {
  width: 50%;
- height: 50%;
+ height: 50%; 
  margin-left: 25%;
- margin-top: 12%;
+ margin-top: 12%; 
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -363,7 +370,7 @@ body {
 .box1 {
   margin-top: 5%;
   margin-bottom: 50px;
-  border-radius: 0px 25px 0px 25px;
+  border-radius: 0px 25px 0px 25px;  
 }
 
 .box1 p {
@@ -377,21 +384,21 @@ body {
 }
 
 .sombra {
-  border-radius: 25px 25px 25px 25px;
-  margin-bottom: 4%;
+  border-radius: 25px 25px 25px 25px;  
+  margin-bottom: 4%;  
 }
 
 .sombra h5 {
-  padding: 2%;
+  padding: 2%;  
 }
 
 .sombra2 {
-  border-radius: 25px 25px 25px 25px;
-  margin-bottom: 1%;
+  border-radius: 25px 25px 25px 25px;  
+  margin-bottom: 1%;  
 }
 
 .sombra2 h5 {
-  padding: 2%;
+  padding: 2%;  
 }
 
 .lista i {
@@ -404,11 +411,11 @@ body {
 
 .cambio h6 {
   font-size: 18px;
-  line-height: normal;
+  line-height: normal;  
 }
 
 .cambio p {
-  font-size: 18px;
+  font-size: 18px;  
 }
 
 .listinSimple li {
@@ -419,67 +426,67 @@ body {
 .listin li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/redo2Y.png');
+  list-style-image: url('../images/redo2Y.png');
 }
 
 .listin2 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/checkmarkY.png');
+  list-style-image: url('../images/checkmarkY.png');
 }
 
 .listin3 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/point-rightY.png');
+  list-style-image: url('../images/point-rightY.png');
 }
 
 .listin4 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/file-text2Y.png');
+  list-style-image: url('../images/file-text2Y.png');
 }
 
 .listin5 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/clipboardY.png');
+  list-style-image: url('../images/clipboardY.png');
 }
 
 .listinBlue li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/redo2B.png');
+  list-style-image: url('../images/redo2B.png');
 }
 
 .listinBlue2 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/checkmarkB.png');
+  list-style-image: url('../images/checkmarkB.png');
 }
 
 .listinBlue3 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/point-rightB.png');
+  list-style-image: url('../images/point-rightB.png');
 }
 
 .listinBlue4 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/file-text2B.png');
+  list-style-image: url('../images/file-text2B.png');
 }
 
 .listinBlue5 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/pasteB.png');
+  list-style-image: url('../images/pasteB.png');
 }
 
 .listinBlue6 li {
   padding-top: 2%;
   padding-bottom: 2%;
-  list-style-image: url('../img/clipboardB.png');
+  list-style-image: url('../images/clipboardB.png');
 }
 
 .datos li {
@@ -491,14 +498,14 @@ body {
 }
 
 .social {
-  float: left;
+  float: left;   
 }
 
-.social ul {
-  list-style:none;
+.social ul {  
+  list-style:none;  
 }
 
-.social a {
+.social a {  
   display:inline-block;
   color: #000;
   background:#000;
@@ -509,7 +516,7 @@ body {
   transition: all 500ms ease;
 }
 
-.social a:hover {
+.social a:hover {    
      background: #d0da2b;
   }
 
@@ -526,7 +533,7 @@ body {
   width: 100%;
   margin-top: 3%;
   margin-bottom: 1%;
-  background-image: url(../img/separador.png);
+  background-image: url(../images/separador.png);
   background-repeat: no-repeat;
   background-size: auto;
  }
@@ -535,22 +542,39 @@ body {
   width: 100%;
   margin-top: 5%;
   margin-bottom: 1%;
-  background-image: url(../img/separador2.png);
+  background-image: url(../images/separador2.png);
   background-repeat: no-repeat;
   background-size: auto;
  }
+ 
 
- .product h2 {
-   padding-bottom: 1%;
+ .product h2 {   
+   padding-bottom: 1%;   
    font-weight: bold;
-   margin-left: 22%;
+   margin-left: 20%;
  }
 
- .product2 h2 {
-   padding-bottom: 1%;
+ @media screen and (max-width:700px) {
+.product h2 {   
+   padding-bottom: 1%;   
+   font-weight: bold;
+   margin-left: 2%;
+ }
+}
+
+ .product2 h2 {   
+   padding-bottom: 1%;   
    font-weight: bold;
    margin-left: 15%;
  }
+
+ @media screen and (max-width:700px) {
+.product2 h2 {   
+   padding-bottom: 1%;   
+   font-weight: bold;
+   margin-left: 2%;
+ }
+}
 
  ol {
   list-style-type: disc;
@@ -558,11 +582,11 @@ body {
  }
 
  .checkLista li {
-    list-style-image: url('../img/checkmark.png');
+    list-style-image: url('../images/checkmark.png');
  }
 
  .fondoTable {
-    background: url(../img/fondo_tabla1.png) no-repeat fixed center;
+    background: url(../images/fondo_tabla1.png) no-repeat fixed center;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -572,22 +596,73 @@ body {
    text-align: center;
  }
 
- .fontTable h6 {
+ .fontTable h6 {    
     padding-top: 15%;
-    padding-bottom: 36%;
+    padding-bottom: 36%;    
  }
 
- .fontTable2 h6 {
+ .fontTable2 h6 {    
     padding-top: 15%;
-    padding-bottom: 26%;
+    padding-bottom: 26%;    
  }
 
  .linkModulo {
-    padding: 2%;
+    padding: 2%;   
  }
 
-.titleRedes h6 {
+.titleRedes h6 {  
   padding-top: 4%;
   padding-left: 10%;
   padding-bottom: 4%;
 }
+
+.tdClase p {  
+  margin-bottom: 100px;
+}
+
+.tdClase2 p {
+  margin-bottom: 20px;
+}
+
+.tdClase3 p {
+  margin-bottom: 0px;
+}
+
+.tdClase4 p {  
+  margin-bottom: 15px;
+}
+
+.tdClase5 p {
+  margin-top: 60px;
+}
+
+@media screen and (max-width:700px) {
+.tablex {   
+   display: none;
+ }
+}
+
+.tablex2 {
+  display: none;
+}
+
+@media screen and (max-width:700px) {
+.tablex2 {   
+   display: block; 
+ }
+}
+
+.tablex3 {
+  display: none;
+}
+
+@media screen and (max-width:700px) {
+.tablex3 {   
+   display: block; 
+ }
+}
+
+
+
+
+
