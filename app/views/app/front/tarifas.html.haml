@@ -51,7 +51,7 @@
         .col.s12.cambio.justificar
           %h5 Tarifas de inscripción y colocación de títulos valores
           %p.flow-text La Bolsa Pública de Valores Bicentenaria (BPVB), informa las nuevas tarifas de inscripción y colocación de Títulos Valores, prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
-        .tablex.col.s12
+        .col.s12.col.s12.hide-on-med-and-down
           %table.striped.responsive-table.tablaMargen
             %thead
               %tr.red.darken-4
@@ -70,151 +70,63 @@
                 %td Colocación de Títulos Valores
                 %td Las tarifas se aplican sobre los títulos valores totalmente colocados
                 %td 1,00%
-          .tablex2.col.s12
-            %ul.collection
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Descripción de la Comisión
-              %li.collection-item.center.align Inscripción de Títulos Valores
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Detalles
-              %li.collection-item.center.align Las tarifas se aplican sobre el monto de la emisión aprobada por la Superintendencia Nacional de Valores (SNV)
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Tarifa
-              %li.collection-item.center.align 0,05%
-            %ul.collection
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Descripción de la Comisión
-              %li.collection-item.center.align Colocación de Títulos Valores
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Detalles
-              %li.collection-item.center.align Las tarifas se aplican sobre los títulos valores totalmente colocados
-              %li.collection-item.red.darken-4.white-text.center.align
-                %b Tarifa
-              %li.collection-item.center.align 1,00%        
-          .col.s12.cambio.justificar
-            %h5 Tarifas por servicio de mantenimiento de custodia
-            %p.flow-text
-              %b La Bolsa Pública de Valores Bicentenaria (BPVB)
-              informa las nuevas tarifas a partir del 01 de Junio de 2017  por el
-              = succeed "," do
-                %b Servicio de Custodia de Títulos Valores
-                prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
-            %p.flow-text
-              %b Beneficios
-          %ol.cambio.checkLista
-            %li
-              %p Seguridad y protección de sus Títulos Valores.
-            %li
-              %p Ofrece a los inversores mantener sus inversiones en estricta confidencialidad.
-            %li
-              %p Agilidad en las transacciones de intermediación.
-            %li
-              %p Abono directo en su cuenta (inscritas en la BPVB),  por cobro de intereses, dividendos o vencimiento de capital.
-            %li
-              %p Emisión de certificado de custodia si lo requiere.
-          %p
-            %b Requisito
-          %ol.cambio.checkLista
-            %li
-              %p Estar inscrito en la BPVB.
-          %p
-            %b Pagos
-          %ol.cambio.checkLista
-            %li
-              %p Solo se aceptan  transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
-      .tablex.col.s12
-        %table.striped.tablaMargen
-          %thead
-            %tr
-              %th.alto.col.s3.red.darken-4
-                %h6.white-text
-                  %b
-                    Concepto
-                    %b
-              %th.alto.col.s3.red.darken-4
-                %h6.white-text
-                  %b Tipo de Inversor
-              %th.alto.col.s3.red.darken-4
-                %h6.white-text
-                  %b Valores Nominales Bs.
-              %th.alto.col.s3.red.darken-4
-                %h6.white-text
-                  %b Tarifas
-          %tbody
-            %tr.izquierda
-              %td.cuadro.col.s3.justificar
-                %p
-                  %b Mantenimiento de custodia:
-                  comisión sobre la posición total que mantenga el inversor en la BPVB al cierre de mes.
-                  
-                  Los Valores Nominales de títulos en moneda extranjera, serán convertidos en Bolívares a la tasa oficial establecida.
-                  %br/
-                  %br/
-                  %b Nota:
-                  Para el cálculo de las comisiones de mantenimiento de custodia se considera la posición consolidada del inversor al  cierre de mes, la tarifa  es anualizada y se factura mensual dentro de los cinco (5) primeros días hábiles del mes siguiente.    Cálculo (VN * Tarifa / 360 * 30)
-              %td.col.s3
-                %table
-                  %tr
-                    %td.tdClase.center.align
-                      %p Persona Natural
-                  %tr
-                    %td.tdClase.center.align
-                      %p Persona Jurídica
-              %td.col.s3
-                %table
-                  %tr
-                    %td.center.align
-                      %p Menos de 50.000
-                  %tr
-                    %td.tdClase2.center.align
-                      %p A partir de 50.001
-                  %tr
-                    %td.center.align
-                      %p Menos de 50.000
-                  %tr
-                    %td.center.align
-                      %p A partir de 50.001
-              %td.col.s3
-                %table
-                  %tr
-                    %td.center.align
-                      %p Exonerado
-                  %tr
-                    %td.tdClase3.center.align
-                      %p 0,50% Mensual s/VN (Mínimo 2  UT)
-                  %tr
-                    %td.center.align
-                      %p Exonerado
-                  %tr
-                    %td.center.align
-                      %p 0,50% Mensual s/VN (Mínimo 2  UT)
-            %tr.izquierda
-              %td.cuadro.col.s3.justificar
-                %p
-                  %b Traspaso de Títulos Valores:
-                  transferencia de Títulos Valores de la BPVB hacia otra institución financiera.
-                  %br/
-                  %br/
-                  %b Nota:
-                  El inversor debe efectuar el pago por cada título valor a traspasar antes de realizar la operación.
-              %td.col.s3
-                %table
-                  %tr
-                    %td.tdClase4.tdClase5.center.align
-                      %p Persona Natural
-                  %tr
-                    %td.tdClase4.center.align
-                      %p Persona Jurídica
-              %td.col.s6
-                %table
-                  %tr
-                    %td.center.align.red.darken-4
-                      %p.white-text
-                        %b Tarifas
-                  %tr
-                    %td.center.align
-                      %p 0,01% s/VN (Mínimo 2 UT).
-        .tablex2.col.s12
+        .col.s12.hide-on-large-only
+          %ul.collection
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Descripción de la Comisión
+            %li.collection-item.center.align Inscripción de Títulos Valores
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Detalles
+            %li.collection-item.center.align Las tarifas se aplican sobre el monto de la emisión aprobada por la Superintendencia Nacional de Valores (SNV)
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Tarifa
+            %li.collection-item.center.align 0,05%
+          %ul.collection
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Descripción de la Comisión
+            %li.collection-item.center.align Colocación de Títulos Valores
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Detalles
+            %li.collection-item.center.align Las tarifas se aplican sobre los títulos valores totalmente colocados
+            %li.collection-item.red.darken-4.white-text.center.align
+              %b Tarifa
+            %li.collection-item.center.align 1,00%
+        .col.s12.cambio.justificar
+          %h5 Tarifas por servicio de mantenimiento de custodia
+          %p.flow-text
+            %b La Bolsa Pública de Valores Bicentenaria (BPVB)
+            informa las nuevas tarifas a partir del 01 de Junio de 2017  por el
+            = succeed "" do
+              %b Servicio de Custodia de Títulos Valores
+              prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
+          %p.flow-text
+            %b Beneficios
+        %ol.cambio.checkLista
+          %li
+            %p Seguridad y protección de sus Títulos Valores.
+          %li
+            %p Ofrece a los inversores mantener sus inversiones en estricta confidencialidad.
+          %li
+            %p Agilidad en las transacciones de intermediación.
+          %li
+            %p Abono directo en su cuenta (inscritas en la BPVB),  por cobro de intereses, dividendos o vencimiento de capital.
+          %li
+            %p Emisión de certificado de custodia si lo requiere.
+        %p
+          %b Requisito
+        %ol.cambio.checkLista
+          %li
+            %p Estar inscrito en la BPVB.
+        %p
+          %b Pagos
+        %ol.cambio.checkLista
+          %li
+            %p Solo se aceptan  transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
+        %p
+          %b Tarifa
+        .col.s12.hide-on-med-and-down
+          %img.responsive-img{:src => "/assets/img/tablex.jpg"}/
+        .col.s12.hide-on-large-only
           %ul.collection
             %li.collection-item.red.darken-4.white-text.center.align
               %b Concepto
@@ -250,7 +162,7 @@
             %li.collection-item.center.align Persona Natural / Persona Jurídica
             %li.collection-item.red.darken-4.white-text.center.align
               %b Tarifas
-            %li.collection-item.center.align 0,01% s/VN (Mínimo 2 UT)                    
+            %li.collection-item.center.align 0,01% s/VN (Mínimo 2 UT)
     %footer.page-footer
       .container
         .row

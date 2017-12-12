@@ -3,6 +3,7 @@ Rails.application.routes.draw do
    get '/atencion', to: 'app/front#atencion', as: :app_atencion
    get '/colocacioninstrumentos', to: 'app/front#colocacioninstrumentos', as: :app_colocacioninstrumentos
    get '/index', to: 'app/front#index', as: :app_index
+   get '/charts', to: 'app/front#charts', as: :app_charts
    get '/estructuracion', to: 'app/front#estructuracion', as: :app_estructuracion
    get '/quienessomos', to: 'app/front#quienessomos', as: :app_quienessomos
    get '/juridica', to: 'app/front#juridica', as: :app_juridica

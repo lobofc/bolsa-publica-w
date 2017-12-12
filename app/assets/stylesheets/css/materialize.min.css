@@ -3355,7 +3355,8 @@ nav .brand-logo {
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
-    white-space: nowrap
+    white-space: nowrap;
+    object-fit: contain;
 }
 nav .brand-logo.center {
     left: 50%;

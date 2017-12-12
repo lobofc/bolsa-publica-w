@@ -37,6 +37,34 @@ module App
 
     end
 
+    def charts
+      @pathCSV = []
+      @arrayId = []
+      @charts = Chart.all
+      @counter = Chart.count
+      @indicators = Indicator.all
+
+      @charts.each_with_index do |chart, index|
+        path = chart.file.path.split("/")
+        id = chart.id
+
+        path.each_with_index do |path, index|
+          @position = index if path == "uploads"
+        end
+
+        @position.times do |x|
+          path.shift
+        end
+
+        path = path.join("/")
+
+        @pathCSV << path
+        @arrayId << chart.value_one << chart.value_two
+      end
+
+
+    end
+
     def mercadosecundario
     end
 

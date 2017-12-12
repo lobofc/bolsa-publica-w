@@ -2,7 +2,7 @@
 %html
   %head
     = render 'app/layouts/head'
-    %meta{:content => "initial-scale=1.0, width=1000", :name => "viewport"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bolsa Pública
     %meta{:charset => "utf-8"}/
     %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
@@ -53,20 +53,22 @@
               %a{:href => "/estadisticas"} Estadísticas
             %li
               %a{:href => "/contacto"} Contacto
-    .marquee.col.s12
+    .marquee.col.s12.hide-on-med-and-down
       %p
         - @indicators.each do |indicator|
           %span.indice= "#{indicator.name}:"
           =indicator.value
-    -@charts.each_with_index do |chart, x|
-      .row
-        .col.l12
-          .center-f
-            %h6.title-chart= "#{chart.name}"
-        .col.l12
-          .center-f
-            .chart.container-chart{id: "chartdiv-#{x+1}"}
-
+    .show-table-and-below
+      %iframe{:height => "100vh!important", :src => "charts", :style => "height:100vh", :width => "100%"}
+    .hide-on-med-and-down
+      -@charts.each_with_index do |chart, x|
+        .row
+          .col.l12
+            .center-f
+              %h6.title-chart= "#{chart.name}"
+          .col.l12
+            .center-f
+              .chart.container-chart{id: "chartdiv-#{x+1}"}
     %footer.page-footer
       .container
         .row
@@ -115,7 +117,10 @@
           © 2017 Copyright Bolsa Pública de Valores Bicentenaria / RIF: G-20009677-2
     %script{:src => "assets/js/jquery-3.2.1.min.js", :type => "text/javascript"}
     %script{:src => "assets/js/materialize.min.js", :type => "text/javascript"}
-
+    :javascript
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      });
 :scss
   .container-chart{
     width: 80%; height: 400px;
@@ -158,6 +163,7 @@
       categoryAxis.gridAlpha = 0.15;
       categoryAxis.minorGridEnabled = true;
       categoryAxis.axisColor = "#DADADA";
+      categoryAxis.maxSeries = 0;
 
       // value
       var valueAxis = new AmCharts.ValueAxis();
@@ -326,8 +332,16 @@
   }
 
 :scss
+
+  .show-table-and-below{
+    display: none!important;
+    @media (max-width:768px){
+      display: block!important;
+    }
+  }
+
   .center-f {
-    height: 100% !important;
+    height: 100%;
     padding: 0 !important;
     margin: 0 !important;
     display: -webkit-box !important;
