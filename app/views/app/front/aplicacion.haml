@@ -50,7 +50,7 @@
               %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
           %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quiénes Somos
           %ul.right.hide-on-med-and-down.botonNav
             %li
               %a.grey.darken-4.white-text{:href => "/index"} Inicio
@@ -58,7 +58,7 @@
             %li
               %a{:href => "/index"} Inicio
             %li
-              %a{:href => "/quienessomos"} Quienes Somos
+              %a{:href => "/quienessomos"} Quiénes Somos
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
@@ -66,8 +66,8 @@
             %li
               %a{:href => "/contacto"} Contacto
     .row.letreroFondo
-      .col.s12.m6
-        %img{:src => "assets/img/Letrero_fondo.png"}/
+      .col.s12.m6.hide-on-small-only
+        %img.responsive-img{:src => "assets/img/Letrero_fondo.png"}/
     .container
       .row
         .col.s12.m6
@@ -140,7 +140,7 @@
                   .collapsible-header
                     Fecha Valor
                   .collapsible-body.justificar
-                    %p Fecha a partir de la cual se calculan los intereses y rendimiento del título.
+                    %p Momento en el cual se ejecutará efectivamente la operación.
                 %li
                   .collapsible-header
                     Valor Nominal

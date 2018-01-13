@@ -31,7 +31,7 @@
               %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
           %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quiénes Somos
           %ul.right.hide-on-med-and-down.botonNav
             %li
               %a.grey.darken-4.white-text{:href => "/index"} Inicio
@@ -39,7 +39,7 @@
             %li
               %a{:href => "/index"} Inicio
             %li
-              %a{:href => "/quienessomos"} Quienes Somos
+              %a{:href => "/quienessomos"} Quiénes Somos
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
@@ -93,76 +93,55 @@
             %li.collection-item.center.align 1,00%
         .col.s12.cambio.justificar
           %h5 Tarifas por servicio de mantenimiento de custodia
-          %p.flow-text
-            %b La Bolsa Pública de Valores Bicentenaria (BPVB)
-            informa las nuevas tarifas a partir del 01 de Junio de 2017  por el
-            = succeed "" do
-              %b Servicio de Custodia de Títulos Valores
-              prestando como siempre un servicio eficaz y con las mejores tarifas del mercado.
-          %p.flow-text
-            %b Beneficios
-        %ol.cambio.checkLista
-          %li
-            %p Seguridad y protección de sus Títulos Valores.
-          %li
-            %p Ofrece a los inversores mantener sus inversiones en estricta confidencialidad.
-          %li
-            %p Agilidad en las transacciones de intermediación.
-          %li
-            %p Abono directo en su cuenta (inscritas en la BPVB),  por cobro de intereses, dividendos o vencimiento de capital.
-          %li
-            %p Emisión de certificado de custodia si lo requiere.
-        %p
-          %b Requisito
-        %ol.cambio.checkLista
-          %li
-            %p Estar inscrito en la BPVB.
-        %p
-          %b Pagos
-        %ol.cambio.checkLista
-          %li
-            %p Solo se aceptan  transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
-        %p
-          %b Tarifa
-        .col.s12.hide-on-med-and-down
+        .margenList2.col.s12.m10.offset-m1.l8.offset-l2.hide-on-med-and-down
+          %p.flow-text.center.align Mantenimiento de Custodia Mensual
           %img.responsive-img{:src => "/assets/img/tablex.jpg"}/
+        .col.s12.cambio.justificar
+          %p.flow-text El cálculo del mantenimiento de custodia mensual se realizara sobre la posición total de títulos valores que mantenga el inversor al cierre de mes, asimismo la fórmula que se aplicará es: Valor Nominal Bs. * 0,05% / 360 * 30, la factura se emitirá dentro de los 5 primeros días hábiles del mes siguiente.
+          %p.flow-text Si el resultado del cálculo es menor a 2 Unidades Tributarias (UT), se cobrará como mínimo 2 UT.
+          %p.flow-text Los Valores Nominales de los títulos en moneda extranjera, serán convertidos en Bolívares a la tasa de cambio oficial establecida.
         .col.s12.hide-on-large-only
           %ul.collection
             %li.collection-item.red.darken-4.white-text.center.align
-              %b Concepto
-            %li.collection-item.justificar
-              %b Mantenimiento de custodia:
-              comisión sobre la posición total que mantenga el inversor en la BPVB al cierre de mes.
-              Los Valores Nominales de títulos en moneda extranjera, serán convertidos en Bolívares a la tasa oficial establecida.
-              %br/
-              %br/
-              %b Nota:
-              Para el cálculo de las comisiones de mantenimiento de custodia se considera la posición consolidada del inversor al  cierre de mes, la tarifa  es anualizada y se factura mensual dentro de los cinco (5) primeros días hábiles del mes siguiente.    Cálculo (VN * Tarifa / 360 * 30)
+              %b Tipo de Personas
+            %li.collection-item.center.align Persona Natural y Jurídica
             %li.collection-item.red.darken-4.white-text.center.align
-              %b Tipo de Inversor
-            %li.collection-item.center.align Persona Natural / Persona Jurídica
-            %li.collection-item.red.darken-4.white-text.center.align
-              %b Valores Nominales Bs. - Tarifas
+              %b Valores Nominales en Bs. / Tarifas
             %li.collection-item.center.align
-              Menos de 50.000 - Exonerado
+              Menos de 50.000 / Exonerado
               %br/
-              A partir de 50.001 - 0,50% Mensual s/VN (Mínimo 2  UT)
+              A partir de 50.001 / 0,05% s/Valor Nominal Bs. (Mínimo 2 UT)
           %ul.collection
             %li.collection-item.red.darken-4.white-text.center.align
-              %b Concepto
-            %li.collection-item.justificar
-              %b Traspaso de Títulos Valores:
-              transferencia de Títulos Valores de la BPVB hacia otra institución financiera.
-              %br/
-              %br/
-              %b Nota:
-              El inversor debe efectuar el pago por cada título valor a traspasar antes de realizar la operación.
-            %li.collection-item.red.darken-4.white-text.center.align
-              %b Tipo de Inversor
-            %li.collection-item.center.align Persona Natural / Persona Jurídica
+              %b Tipo de Personas
+            %li.collection-item.center.align Personal activo de la BPVB
             %li.collection-item.red.darken-4.white-text.center.align
               %b Tarifas
-            %li.collection-item.center.align 0,01% s/VN (Mínimo 2 UT)
+            %li.collection-item.center.align
+              Exonerado
+        .flow-text.col.col.s12.m10.offset-m1.l8.offset-l2.center.align
+          %p Traspaso de Títulos Valores
+        %table.striped.tablaMargen.col.s12.m10.offset-m1.l8.offset-l2
+          %thead
+            %tr
+              %th.alto.col.s6.red.darken-4
+                %h5.white-text Concepto
+              %th.alto.col.s6.red.darken-4
+                %h5.white-text Tarifa
+          %tbody
+            %tr.izquierda
+              %td.col.s6.center.align
+                %p
+                  %b Traspaso por cada título valor a otra institución financiera
+              %td.col.s6.center.align
+                %p
+                  %b 0,01% s/Valor Nominal (Mínimo 2 UT)
+        .col.s12.cambio.justificar
+          %p.flow-text El monto a cobrar se aplicará una vez que el inversor imparta la orden de transferir sus títulos desde la BPVB a otra institución financiera, debiendo efectuar el pago por tal concepto antes de realizar el traspaso.
+          %p.flow-text Si el resultado del cálculo es menor a 2 Unidades Tributarias (UT), se cobrará como mínimo 2 UT.
+          %p.flow-text
+            %b Formas de Pago
+          %p.flow-text Solo se aceptan transferencias electrónicas, depósitos o cheques de cuentas del inversor registrada en la BPVB.
     %footer.page-footer
       .container
         .row
@@ -191,13 +170,17 @@
             %h5.white-text Menú
             %ul
               %li
-                %a.grey-text.text-lighten-3{:href => "/documents/LCFT.pdf", :target => "blank"} Prevención y control
+                %a.grey-text.text-lighten-3{:href => "/documents/LCFT.pdf", :target => "blank"} Prevención y Control de Legitimación de Capitales y Financiamiento al Terrorismo
               %li
                 %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
               %li
                 %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Jurídico
               %li
                 %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
+              %li
+                %a.grey-text.text-lighten-3{:href => "/concurso"} Concurso Público para Ingreso de Personal
+              %li
+                %a.grey-text.text-lighten-3{:href => "/contrataciones"} Contrataciones Públicas
               %h5.white-text Enlaces de interés
               %ul
                 %li

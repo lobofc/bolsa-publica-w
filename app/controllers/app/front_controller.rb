@@ -71,6 +71,12 @@ module App
     def marcolegal
     end
 
+    def concurso
+    end
+
+    def contrataciones
+    end
+
     def persona
     end
 

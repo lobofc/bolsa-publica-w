@@ -14,6 +14,8 @@ Rails.application.routes.draw do
    get '/tarifas', to: 'app/front#tarifas', as: :app_tarifas
    get '/persona', to: 'app/front#persona', as: :app_persona
    get '/marcolegal', to: 'app/front#marcolegal', as: :app_marcolegal
+   get '/concurso', to: 'app/front#concurso', as: :app_concurso
+   get '/contrataciones', to: 'app/front#contrataciones', as: :app_contrataciones
    get '/mercadosecundario', to: 'app/front#mercadosecundario', as: :app_mercadosecundario
    get '/custodia', to: 'app/front#custodia', as: :app_custodia
    get '/estadisticas', to: 'app/front#estadisticas', as: :app_estadisticas

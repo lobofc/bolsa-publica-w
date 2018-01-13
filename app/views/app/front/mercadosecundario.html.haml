@@ -31,7 +31,7 @@
               %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
           %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quiénes Somos
           %ul.right.hide-on-med-and-down.botonNav
             %li
               %a.grey.darken-4.white-text{:href => "/index"} Inicio
@@ -39,7 +39,7 @@
             %li
               %a{:href => "/index"} Inicio
             %li
-              %a{:href => "/quienessomos"} Quienes Somos
+              %a{:href => "/quienessomos"} Quiénes Somos
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
@@ -48,50 +48,45 @@
               %a{:href => "/contacto"} Contacto
     .container.anidada
       .row
-        .shadow.col.s12
+        .col.s12
           .col.s12
             %img.responsive-img{:src => "assets/img/intermediacion.jpg"}/
-        .col.s12.m10.offset-m1.sombra.red.darken-4.white-text.center-align
-          %h5 PASOS BASICOS DE UNA OPERACIÓN OFERTA O DEMANDA
-        .col.s12.m6.cambio
-          .col.s12.m4.offset-m3.indigo.darken-4.sombra.center-align.white-text
-            %h5 DEMANDA
-          .col.s12
-            %ol.listinBlue
-              %li.lista
-                %h6 El inversionista manifiesta su intención de compra.
-            %ol.listinBlue2
-              %li
-                %h6 El promotor ofrece la disponibilidad de ofertas en el mercado de valores.
-            %ol.listinBlue3
-              %li
-                %h6 Se pacta la operación de acuerdo a las condiciones de la demanda.
-            %ol.listinBlue4
-              %li
-                %h6 El inversionista se hace de una posición.
-            
-        .col.s12.m6.cambio
-          .col.s12.m4.offset-m3.yellow.darken-2.sombra.center-align.white-text
-            %h5 OFERTA
-          .col.s12
-            %ol.listin
-              %li.lista
-                %h6 El inversionista manifiesta su intención de venta.
-            %ol.listin2
-              %li
-                %h6 El promotor ofrece la disponibilidad en el mercado de valores.
-            %ol.listin3
-              %li
-                %h6 Se pacta la operación de acuerdo a las condiciones de la oferta.
-            %ol.listin4
-              %li
-                %h6 El inversionista se hace de liquidez.
-            
+        .col.s12.m10.offset-m1.center-align.tablaMargen
+          %h5 PASOS BÁSICOS DE UNA OPERACIÓN OFERTA O DEMANDA
+        %table.striped.tablaMargen
+          %thead
+            %tr
+              %th.alto.col.s6.yellow.darken-2
+                %h5.white-text Demanda
+              %th.alto.col.s6.red.darken-4
+                %h5.white-text Oferta
+          %tbody
+            %tr.izquierda
+              %td.col.s6
+                %ol
+                  %li
+                    %p El inversionista manifiesta su intención de compra.
+                  %li
+                    %p El promotor ofrece la disponibilidad de ofertas en el mercado de valores.
+                  %li
+                    %p Se pacta la operación de acuerdo a las condiciones de la demanda.
+                  %li
+                    %p El inversionista se hace de una posición.
+              %td.col.s6
+                %ol
+                  %li
+                    %p El inversionista manifiesta su intención de venta.
+                  %li
+                    %p El promotor ofrece la disponibilidad en el mercado de valores.
+                  %li
+                    %h6 Se pacta la operación de acuerdo a las condiciones de la oferta.
+                  %li
+                    %p El inversionista se hace de liquidez.
         .col.s12.cambio
-          .col.s12.m2.red.darken-4.sombra2.center-align.white-text
+          .col.s8.m2
             %h5 NOTA:
           .col.s12
-            %ul.listinSimple              
+            %ul.listinSimple
               %li
                 %h6 - Fecha Pacto: Fecha en la cual se aprueba o confirma (pacto en firme) la operación por parte del inversionista.
               %li
@@ -124,13 +119,17 @@
             %h5.white-text Menú
             %ul
               %li
-                %a.grey-text.text-lighten-3{:href => "/documents/LCFT.pdf", :target => "blank"} Prevención y control
+                %a.grey-text.text-lighten-3{:href => "/documents/LCFT.pdf", :target => "blank"} Prevención y Control de Legitimación de Capitales y Financiamiento al Terrorismo
               %li
                 %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
               %li
                 %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Jurídico
               %li
                 %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
+              %li
+                %a.grey-text.text-lighten-3{:href => "/concurso"} Concurso Público para Ingreso de Personal
+              %li
+                %a.grey-text.text-lighten-3{:href => "/contrataciones"} Contrataciones Públicas
               %h5.white-text Enlaces de interés
               %ul
                 %li

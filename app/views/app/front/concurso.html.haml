@@ -1,7 +1,6 @@
 !!!
 %html
   %head
-    = render 'app/layouts/head'
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bolsa Pública
     %meta{:charset => "utf-8"}/
@@ -31,7 +30,7 @@
               %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
           %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quiénes Somos
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
           %ul.right.hide-on-med-and-down.botonNav
             %li
               %a.grey.darken-4.white-text{:href => "/index"} Inicio
@@ -39,32 +38,27 @@
             %li
               %a{:href => "/index"} Inicio
             %li
-              %a{:href => "/quienessomos"} Quiénes Somos
+              %a{:href => "/quienessomos"} Quienes Somos
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
               %a{:href => "/estadisticas"} Estadísticas
             %li
               %a{:href => "/contacto"} Contacto
-    .container.anidada
+    .container.anidada.tablaMargen
       .row
         .col.s12
-          %img.responsive-img{:src => "assets/img/infoAtencion.jpg"}/
-        .col.s12
-          %img.responsive-img{:src => "assets/img/atencion-medio.jpg"}/
-        .col.s12
-          %h5.tablaMargen.center-align ¿Cómo puede presentar su denuncia, queja, reclamo, solicitud o sugerencia ante la Oficina de Atención al Ciudadano?    
-        .image.tablaMargen.col.s12
-          %img{:src => "assets/img/atencion.png"}/
+          %h5 Actualmente no existe Concurso Público para Ingreso de Personal.
+          %br/       
     %footer.page-footer
       .container
         .row
           .col.s12.m6
             %h5.white-text Bolsa Pública de Valores Bicentenaria
             %p.grey-text.text-lighten-4
-              Av. Francisco de Miranda, Edificio Torre Europa, Nivel C, Of. S/N
+              Av. Francisco de Miranda, Edif. Torre Europa, Piso Nivel C, Of. S/N
               %br/
-              Urb. El Rosal, Municipio Chacao, Estado Miranda. Zona Postal 1060.
+              Urb. El Rosal, Caracas(Chacao), Miranda. Zona Postal: 1060.
               %br/
               %b Horario de atención al público:
               De 8:00 a.m. a 4:30 p.m.
@@ -77,7 +71,7 @@
                 %h6 Redes Sociales:
                 %br/
               %li
-                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/Bolsa-Publica-de-Valores-Bicentenaria-470631792952689/?fref=ts", :target => "_blank"}
+                %a.icon-facebook.img-circle{:href => "https://www.facebook.com/bolsapublicave/", :target => "_blank"}
                 %a.icon-twitter.img-circle{:href => "https://twitter.com/Bolsa_Publica", :target => "_blank"}
                 %a.icon-instagram.img-circle{:href => "https://www.instagram.com/bolsa_publica/", :target => "_blank"}
           .col.l4.offset-l2.s12
@@ -88,13 +82,13 @@
               %li
                 %a.grey-text.text-lighten-3{:href => "/atencion"} Atención al Ciudadano
               %li
-                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Jurídico
+                %a.grey-text.text-lighten-3{:href => "/marcolegal"} Marco Legal
               %li
                 %a.grey-text.text-lighten-3{:href => "http://www.sunaval.gob.ve/snv/site/glosario_terminos.php"} Glosario de términos
               %li
                 %a.grey-text.text-lighten-3{:href => "/concurso"} Concurso Público para Ingreso de Personal
               %li
-                %a.grey-text.text-lighten-3{:href => "/contrataciones"} Contrataciones Públicas  
+                %a.grey-text.text-lighten-3{:href => "/contrataciones"} Contrataciones Públicas
               %h5.white-text Enlaces de interés
               %ul
                 %li
@@ -114,5 +108,5 @@
       })
 
       $(document).ready(function(){
-        $('.slider').slider();
-      });
+          $('.slider').slider();
+        });
