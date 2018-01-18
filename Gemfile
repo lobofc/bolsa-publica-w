@@ -29,6 +29,7 @@ gem 'to_xls-rails'
 
 # Database
 gem 'mysql2', '~> 0.3.18'
+gem 'sprockets', '3.6.3'
 
 # SEO
 gem 'sitemap_generator'
