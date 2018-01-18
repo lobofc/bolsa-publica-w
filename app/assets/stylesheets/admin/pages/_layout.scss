@@ -6,7 +6,7 @@ body {
   overflow-y: hidden;
 
   .pageslide-background {
-    
+    @include transition(.25s);
   }
 }
 
