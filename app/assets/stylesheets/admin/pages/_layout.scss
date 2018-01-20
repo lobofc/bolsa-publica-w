@@ -151,10 +151,10 @@ body {
   }
 
   .remove-dield > label.checkbox_material {
-    @include align-items(center);
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(center);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     background: rgba($black, .8);
     border-radius: 3px;
