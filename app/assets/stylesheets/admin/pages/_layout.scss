@@ -178,11 +178,9 @@ body {
 
 //spinner request turbolink
 .rotate {
-  @include animation(rotate .6s linear infinite);
+  animation: rotate 6s linear infinite;
 }
 
-@include keyframes(rotate) {
-  to {
-    @include transform(rotate(360deg));
-  }
+@keyframes rotate {
+  transform: rotate(360);
 }
