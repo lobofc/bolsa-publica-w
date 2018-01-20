@@ -1,13 +1,12 @@
 @import 'nprogress';
 @import 'nprogress-bootstrap';
-@import 'utils/mixins';
 
 body {
   overflow-x: hidden;
   overflow-y: hidden;
 
   .pageslide-background {
-    @include transition(.25s);
+    transition(.25s);
   }
 }
 
