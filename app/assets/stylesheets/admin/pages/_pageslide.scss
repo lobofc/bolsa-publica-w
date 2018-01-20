@@ -2,7 +2,7 @@
   overflow: hidden !important;
 
   .pageslide-background {
-    @include transition(.25s);
+    transition: 25s;
     background: rgba($black, .65);
     height: 100%;
     position: fixed;
@@ -96,13 +96,13 @@ pageslide {
   }
 
   .collapsable.collapsible-header::before {
-    @include icon-before('\f067');
+    icon-before: '\f067';
     position: absolute;
     top: 0;
   }
 
   .collapsable.collapsible-header.active::before {
-    @include icon-before('\f068');
+    icon-before: '\f068';
   }
 
   .pageslide-sub-menu {

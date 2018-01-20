@@ -1,5 +1,5 @@
 .form-search {
-  @include transition(all .25s ease-in-out);
+  transition: all 25s ease-in-out;
   display: inline;
   margin-left: 30px;
   position: relative;
