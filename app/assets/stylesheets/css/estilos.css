@@ -42,12 +42,6 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width:900px) {
-.marquee {
-  display: none;  
-} 
-}
-
 .marquee p {
 	width: 300%;
 	height: auto;
@@ -66,6 +60,12 @@ body {
 @keyframes marquee {
 	0%{left: 1500px;}
 	100%{left: -1500px;}
+}
+
+@media screen and (max-width:900px) {
+.marquee {
+  display: none;  
+  } 
 }
 
 @media screen and (max-width:900px) {
