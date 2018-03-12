@@ -11,203 +11,207 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116143326) do
+ActiveRecord::Schema.define(version: 20180312060418) do
 
   create_table "activities", force: :cascade do |t|
-    t.integer  "trackable_id",   limit: 4
-    t.string   "trackable_type", limit: 255
-    t.integer  "owner_id",       limit: 4
-    t.string   "owner_type",     limit: 255
-    t.string   "key",            limit: 255
-    t.text     "parameters",     limit: 65535
-    t.integer  "recipient_id",   limit: 4
-    t.string   "recipient_type", limit: 255
+    t.integer  "trackable_id"
+    t.string   "trackable_type"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.string   "key"
+    t.text     "parameters"
+    t.integer  "recipient_id"
+    t.string   "recipient_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type", using: :btree
-  add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type", using: :btree
-  add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
+  add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
+  add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
+  add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
 
   create_table "appearances", force: :cascade do |t|
-    t.string   "image_background", limit: 255
-    t.string   "theme_name",       limit: 255
-    t.string   "setting_id",       limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "image_background"
+    t.string   "theme_name"
+    t.string   "setting_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "banners", force: :cascade do |t|
-    t.string   "banner",     limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "calculators", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "value",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "banner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "charts", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "file",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "value_one",  limit: 255
-    t.string   "value_two",  limit: 255
+    t.string   "name"
+    t.string   "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "value_one"
+    t.string   "value_two"
+  end
+
+  create_table "contests", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "descripcion"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   create_table "customizes", force: :cascade do |t|
-    t.string   "file",       limit: 255
-    t.boolean  "installed",  limit: 1
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "file"
+    t.boolean  "installed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "google_adwords", force: :cascade do |t|
-    t.string   "url",           limit: 255
-    t.string   "campaign_name", limit: 255
-    t.text     "description",   limit: 65535
-    t.text     "script",        limit: 65535
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "url"
+    t.string   "campaign_name"
+    t.text     "description"
+    t.text     "script"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "google_analytics_settings", force: :cascade do |t|
-    t.string   "ga_account_id",  limit: 255
-    t.string   "ga_tracking_id", limit: 255
-    t.boolean  "ga_status",      limit: 1
-    t.integer  "setting_id",     limit: 4
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "ga_account_id"
+    t.string   "ga_tracking_id"
+    t.boolean  "ga_status"
+    t.integer  "setting_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "google_analytics_tracks", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "tracking_id", limit: 255
-    t.string   "url",         limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name"
+    t.string   "tracking_id"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "indicators", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "value",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name"
+    t.string   "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "keppler_contact_us_message_settings", force: :cascade do |t|
-    t.string   "mailer_to",   limit: 255
-    t.string   "mailer_from", limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "mailer_to"
+    t.string   "mailer_from"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "keppler_contact_us_messages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "subject",    limit: 255
-    t.string   "email",      limit: 255
-    t.text     "content",    limit: 65535
-    t.boolean  "read",       limit: 1
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name"
+    t.string   "subject"
+    t.string   "email"
+    t.text     "content"
+    t.boolean  "read"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "meta_tags", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.text     "meta_tags",   limit: 65535
-    t.string   "url",         limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "title"
+    t.text     "description"
+    t.text     "meta_tags"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.integer  "resource_id",   limit: 4
-    t.string   "resource_type", limit: 255
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
-  add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+  add_index "roles", ["name"], name: "index_roles_on_name"
 
   create_table "settings", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "description", limit: 255
-    t.string   "phone",       limit: 255
-    t.string   "mobile",      limit: 255
-    t.string   "email",       limit: 255
-    t.string   "logo",        limit: 255
-    t.string   "favicon",     limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name"
+    t.string   "description"
+    t.string   "phone"
+    t.string   "mobile"
+    t.string   "email"
+    t.string   "logo"
+    t.string   "favicon"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "smtp_settings", force: :cascade do |t|
-    t.string   "address",     limit: 255
-    t.string   "port",        limit: 255
-    t.string   "domain_name", limit: 255
-    t.string   "email",       limit: 255
-    t.string   "password",    limit: 255
-    t.integer  "setting_id",  limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "address"
+    t.string   "port"
+    t.string   "domain_name"
+    t.string   "email"
+    t.string   "password"
+    t.integer  "setting_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "social_accounts", force: :cascade do |t|
-    t.string   "facebook",    limit: 255
-    t.string   "twitter",     limit: 255
-    t.string   "instagram",   limit: 255
-    t.string   "google_plus", limit: 255
-    t.string   "tripadvisor", limit: 255
-    t.string   "pinterest",   limit: 255
-    t.string   "flickr",      limit: 255
-    t.string   "behance",     limit: 255
-    t.string   "dribbble",    limit: 255
-    t.string   "tumblr",      limit: 255
-    t.string   "github",      limit: 255
-    t.string   "linkedin",    limit: 255
-    t.string   "soundcloud",  limit: 255
-    t.string   "youtube",     limit: 255
-    t.string   "skype",       limit: 255
-    t.string   "vimeo",       limit: 255
-    t.integer  "setting_id",  limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "google_plus"
+    t.string   "tripadvisor"
+    t.string   "pinterest"
+    t.string   "flickr"
+    t.string   "behance"
+    t.string   "dribbble"
+    t.string   "tumblr"
+    t.string   "github"
+    t.string   "linkedin"
+    t.string   "soundcloud"
+    t.string   "youtube"
+    t.string   "skype"
+    t.string   "vimeo"
+    t.integer  "setting_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",                   limit: 255
-    t.string   "permalink",              limit: 255
-    t.string   "username",               limit: 255
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "name"
+    t.string   "permalink"
+    t.string   "username"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "users_roles", id: false, force: :cascade do |t|
-    t.integer "user_id", limit: 4
-    t.integer "role_id", limit: 4
+    t.integer "user_id"
+    t.integer "role_id"
   end
 
-  add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+  add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
 
 end

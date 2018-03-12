@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'turbolinks', '2.5.3'
 gem 'jquery-turbolinks', '2.1.0'
 gem 'to_xls-rails'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 # Database
 gem 'mysql2', '~> 0.3.18'

@@ -253,6 +253,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mimemagic (0.3.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.1)
@@ -267,6 +268,12 @@ GEM
       shellany (~> 0.0)
     nprogress-rails (0.2.0.2)
     orm_adapter (0.5.0)
+    paperclip (4.3.7)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
@@ -444,6 +451,7 @@ DEPENDENCIES
   materialize-sass
   mysql2 (~> 0.3.18)
   nprogress-rails
+  paperclip (~> 4.3, >= 4.3.6)
   public_activity
   quiet_assets
   rails (= 4.2.0)
