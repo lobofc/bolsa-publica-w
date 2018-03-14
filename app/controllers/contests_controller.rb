@@ -1,5 +1,5 @@
 class ContestsController < ApplicationController
-  before_action :set_contest, only: [:show, :edit, :update, :destroy]
+  before_action :set_contest, :set_settings, only: [:index, :show, :edit, :update, :destroy, :concurso]
 
   # GET /contests
   # GET /contests.json
@@ -69,6 +69,11 @@ class ContestsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_contest
       @contest = Contest.find(params[:id])
+    end
+
+    def set_setting
+      @setting = Setting.first
+      @render = params[:config]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
