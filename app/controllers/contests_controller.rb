@@ -1,5 +1,6 @@
 class ContestsController < ApplicationController
-  before_action :set_contest, :set_settings, only: [:index, :show, :edit, :update, :destroy, :concurso]
+  before_action :set_contest, only: [:edit, :update, :destroy, :show]
+  before_action :set_settings, only: [:index, :show, :edit, :update, :destroy, :concurso]
 
   # GET /contests
   # GET /contests.json
