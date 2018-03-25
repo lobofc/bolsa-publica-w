@@ -1,10 +1,10 @@
 !!!
 %html
   %head
-    = render 'app/layouts/head'
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bolsa Pública
-    %meta{:charset => "utf-8"}/    
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/css/materialize.min.css", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "assets/css/estilos.css", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
     %link{:href => "assets/css/fonts.css", :rel => "stylesheet"}/
@@ -30,7 +30,7 @@
               %a.red.darken-4.white-text{:href => "/tarifas"} Tarifas
           %ul.right.hide-on-med-and-down.botonNav
             %li
-              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quiénes Somos
+              %a.grey.darken-3.white-text{:href => "/quienessomos"} Quienes Somos
           %ul.right.hide-on-med-and-down.botonNav
             %li
               %a.grey.darken-4.white-text{:href => "/index"} Inicio
@@ -38,42 +38,21 @@
             %li
               %a{:href => "/index"} Inicio
             %li
-              %a{:href => "/quienessomos"} Quiénes Somos
+              %a{:href => "/quienessomos"} Quienes Somos
             %li
               %a{:href => "/tarifas"} Tarifas
             %li
               %a{:href => "/estadisticas"} Estadísticas
             %li
               %a{:href => "/contacto"} Contacto
-    .container.anidada.tablaMargen
+    .container.titlelist
       .row
-        .shadow.col.s12
-          .col.s12
-            %img.responsive-img{:src => "assets/img/custodia.jpg"}/
-        .col.s12.m10.offset-m1
-          %table.tablaMargen
-            %thead
-              %tr.izquierda
-                %th.alto.col.s12.red.darken-4
-                  %p.white-text Beneficios
-            %tbody
-              %tr.izquierda
-                %td.col.s12.justificar
-                  %ol
-                    %li
-                      %p Estricta confidencialidad.
-                    %li
-                      %p Transparencia y eficacia en los procedimientos.
-                    %li
-                      %p Seguridad y protección de los títulos valores.
-                    %li
-                      %p Mejores Tarifas del mercado.
-                    %li
-                      %p Elaboración de Certificación  de Custodia.
-                    %li
-                      %p Transferencia y liquidación sobre operaciones que se realicen respecto de los valores custodiados.
-                    %li
-                      %p Abono directo a la cuenta del inversor por concepto de pago de cupón, dividendos y rescates o vencimientos de capital.
+        %h4 Contrataciones Públicas
+        - @contracts.each do |contract|    
+          .col.s12.m10.offset-m1.grey.lighten-2.formtop3      
+            %h5.red-text.text-darken-4= contract.titulo
+            %p= contract.descripcion
+            .waves-effect.waves-light.btn.red.darken-4.linkw.lang= link_to 'Consultar', contract.document.url, target: '_blank'    
     %footer.page-footer
       .container
         .row
@@ -132,9 +111,6 @@
       })
 
       $(document).ready(function(){
-          $('.slider').slider();
-        });
-
-      $(document).ready(function(){
-        $('.modal').modal();
-      });
+        $('.slider').slider();
+      });    
+     
